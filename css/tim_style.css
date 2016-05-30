@@ -1,0 +1,23 @@
+/* modifica colore navbar al passaggio del mouse */
+.navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #135EBD;
+}
+
+/* modifica colore navbar al click del mouse */
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #135EBD;
+}
+
+/* posizionamento logo in navbar*/
+.navbar-brand {
+    padding: 10px;
+    margin-left: 15px;
+    display: inline-block;
+}
+
+/* colore dei link nel dropdown menu */
+.navbar-inverse .navbar-nav > li.dropdown.open > ul.dropdown-menu a:hover {
+  background-color: #135EBD;
+}
