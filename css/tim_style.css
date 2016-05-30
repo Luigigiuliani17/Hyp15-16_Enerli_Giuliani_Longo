@@ -17,7 +17,21 @@
     display: inline-block;
 }
 
-/* colore dei link nel dropdown menu */
+/* colore
+dei link nel dropdown menu */
 .navbar-inverse .navbar-nav > li.dropdown.open > ul.dropdown-menu a:hover {
   background-color: #135EBD;
+}
+
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #004990;
+  border-top: 0px solid #004990;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+ul#menu li {
+    display: inline;
 }
