@@ -75,18 +75,17 @@ body {
     margin-left: -0px;
 }
 
-
-/*** STILI BOTTONI ***/
-
-/* stile bottoni "Dettagli" rosso */
-a.dettagli-rosso {
-    border-radius: 10px;
-    background-color: red;
-    color: white;
-    font-size: auto;
+/* classe per i link non raggiungibili */
+a.disabled {
+    cursor: no-drop;
 }
+
+
+
+/**TODO**/
+/*** STILI BOTTONI ***/
 /* stile bottoni "Dettagli" bianco */
-.dettagli-rosso {
+.dettagli-bianco {
     border-radius: 10px;
     background-color: red;
     color: white;
@@ -99,4 +98,3 @@ a.dettagli-rosso {
     color: white;
     font-weight: 200;
 }
-

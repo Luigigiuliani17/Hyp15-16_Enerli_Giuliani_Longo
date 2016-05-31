@@ -8,11 +8,6 @@
     font-size:2em;
 }
 
-/* link non raggiungibili */
-a.disabled {
-    cursor: no-drop;
-}
-
 /*** STILI BOTTONI ***/
 /* bottone "Dettagli" rosso */
 a.button {
@@ -61,7 +56,7 @@ a.button:hover {
     position: relative;
     border-style: solid;
     border-width: 1px;
-    border-color: #;
+    border-color: #0b3d86;
 }
 
 /* arrangiamento immagini nei riquadri principali */
