@@ -37,12 +37,14 @@
     border-bottom-left-radius: 0px;
 }
 
+/* posiziona gli elementi del footer in orizzontale */
 .myMenuFooter > li {
     display: inline;
     color: #ffffff;
     margin: 10px;
 }
 
+/* rimpicciolisce logo sotto i 768 px */
 @media (max-width:767px){
     .navbar-brand img{
         padding: 5px;
@@ -51,34 +53,50 @@
     }
 }
 
+/* spazio per la navbar */
 body {
     padding-top: 65px;
 }
 
-
+/* riquadro bianco contenente i vari sotto-riquadri nelle pagine */
 .container.marketing {
     align-self: center;
     max-width: 90%;
-    background-color: black;
+    background-color: white;
     padding: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 8px;
 }
 
+/* per evitare lo scroll orizzontale */
 .row {
     margin-right: -0px;
     margin-left: -0px;
 }
 
-.textOverCarousel{
-    position:absolute;
-    top:50px;
-    left:50px;
-    color:#fff;
-    font-size:2em;
+
+/*** STILI BOTTONI ***/
+
+/* stile bottoni "Dettagli" rosso */
+a.dettagli-rosso {
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: auto;
+}
+/* stile bottoni "Dettagli" bianco */
+.dettagli-rosso {
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: auto;
+}
+/* stile bottoni "Scopri" blu */
+.scopri-blu {
+    border-radius: 20px;
+    background-color: #0b3d86;
+    color: white;
+    font-weight: 200;
 }
 
-a.disabled {
-    cursor: no-drop;
-}
