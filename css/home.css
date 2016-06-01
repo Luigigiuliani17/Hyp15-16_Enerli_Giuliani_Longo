@@ -2,10 +2,34 @@
 /* posizionamento del testo sopra le immagini del carousel */
 .textOverCarousel{
     position:absolute;
-    top:50px;
-    left:50px;
-    color:#fff;
-    font-size:2em;
+    top:30%;
+    left:10%;
+    font-size:2.5em;
+    color: #fff;
+}
+
+
+@media (max-width: 767px) {
+    .textOverCarousel{
+        position:absolute;
+        top:30%;
+        left:10%;
+        font-size:1.2em;
+        color: #fff;
+    }
+}
+
+textOverCarousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
 }
 
 /*** STILI BOTTONI ***/
@@ -75,4 +99,11 @@ a.button:hover {
     width: 100%;
     color: #fff;
     font-size: 1.5em;
+}
+
+/* rimpicciolisce logo sotto i 768 px */
+@media (max-width:767px){
+    .navbar-nav, .navbar-inverse, .navbar-fixed-top {
+        top: -10px;
+    }
 }
