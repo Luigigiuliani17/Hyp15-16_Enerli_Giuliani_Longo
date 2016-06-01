@@ -21,7 +21,7 @@ function getFromDB(id){
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://tiim.altervista.org/php/prova.php", //Relative or absolute path to file.php file
-        data: {course:id},
+        data: {},
         success: function(response) {
             console.log(JSON.parse(response));
             var obj=JSON.parse(response);

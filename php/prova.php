@@ -11,17 +11,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, lol, lol2 FROM prova";
-$result = $conn->query($sql);
+$query = "SELECT * FROM prova";
+$result = $conn->query($query);
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["lol"]. " " . $row["lol2"]. "<br>";
+if($result->num_rows >0)
+    {
+        $myArray = array();//create an array
+        while($row = $result->fetch_array(MYSQL_ASSOC)) {
+            $myArray[] = $row;
+        }
+        echo json_encode($myArray);
     }
-} else {
-    echo "0 results";
-}
+
 $result->close();
 $conn->close();
 ?>
