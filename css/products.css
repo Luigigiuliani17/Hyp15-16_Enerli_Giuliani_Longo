@@ -1,0 +1,72 @@
+/* cambio colore al link all'interno dei thumbnail - riquadri prodotti */
+.thumbnail a {
+    color: #0b3d86;
+}
+
+/* cambio colore al prezzo */
+.thumbnail h5 {
+    color: #EA1F05;
+    font-size: 18px;
+}
+
+/* centra la didascalia */
+.thumbnail .caption {
+    text-align: center;
+}
+
+/* arrangiamenti per lo stile del riquadro contenente il prodotto */
+.thumbnail {
+    background-color: white;
+    border-style: solid;
+    border-color: #0b3d86;
+
+}
+
+/* modifiche allo stile del percorso dalla home alla pagina attuale */
+.path {
+    align-self: center;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* modifiche allo stile del titolo di ogni categoria*/
+.prod-title {
+    color: #0b3d86;
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+/*** STILI BOTTONI ***/
+/* bottone "Dettagli" bianco */
+a.button {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b3d86;
+    display: inline-block;
+    float: center;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    width: 130px; height: 28px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    -moz-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    position: relative;
+    line-height:28px;
+}
+
+/* passaggio del cursore sul bottone elimina l'ombra*/
+a.button:hover {
+    top: 3px;
+    background-color: rgba( 193, 193, 193, 0.745 );
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
