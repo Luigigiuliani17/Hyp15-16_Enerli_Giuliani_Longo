@@ -80,21 +80,9 @@ a.disabled {
     cursor: no-drop;
 }
 
-
-
-/**TODO**/
-/*** STILI BOTTONI ***/
-/* stile bottoni "Dettagli" bianco */
-.dettagli-bianco {
-    border-radius: 10px;
-    background-color: red;
-    color: white;
-    font-size: auto;
-}
-/* stile bottoni "Scopri" blu */
-.scopri-blu {
-    border-radius: 20px;
-    background-color: #0b3d86;
-    color: white;
-    font-weight: 200;
+/* sposta la navbar sotto i 768 px */
+@media (max-width:767px){
+    .navbar-nav, .navbar-inverse, .navbar-fixed-top {
+        top: -10px;
+    }
 }

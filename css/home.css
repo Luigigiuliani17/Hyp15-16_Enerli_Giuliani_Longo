@@ -100,10 +100,3 @@ a.button:hover {
     color: #fff;
     font-size: 1.5em;
 }
-
-/* rimpicciolisce logo sotto i 768 px */
-@media (max-width:767px){
-    .navbar-nav, .navbar-inverse, .navbar-fixed-top {
-        top: -10px;
-    }
-}
