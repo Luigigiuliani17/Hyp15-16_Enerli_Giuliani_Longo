@@ -1,0 +1,151 @@
+.jumbotron {
+    position: relative;
+    background-image: url("../images/smart_life/banner1.png");
+    background-size: cover;
+    overflow: hidden;
+    height: 150px;
+    padding-top: 18px;
+}
+
+
+.jumbotron .smart_cat_name {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: 5px;
+
+}
+
+.jumbotron .smart_cat_des {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 10%;
+        padding-right: 10%;
+    padding-top: 0px;
+}
+
+/* cambio colore al link all'interno dei thumbnail - riquadri prodotti */
+.thumbnail a {
+    color: #0b3d86;
+}
+
+
+/* arrangiamenti per lo stile del riquadro contenente il prodotto */
+.thumbnail {
+    background-color: white;
+    border-style: solid;
+    border-color: #0b3d86;
+
+}
+
+/* modifiche allo stile del percorso dalla home alla pagina attuale */
+.path {
+    align-self: center;
+    max-width: 100%;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* modifiche allo stile del titolo di ogni categoria di smart life*/
+.row_smart_title {
+    color: #0b3d86;
+    font-size: 32px;
+    text-align: center;
+    position: absolute;
+    top: 30px;
+
+}
+
+/* gestione distanze tra i riquadri */
+.main-content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: 0 auto;
+    max-width: 340px;
+}
+
+/*** STILI BOTTONI ***/
+/* bottone "Scopri" bianco */
+a.button {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b3d86;
+    display: inline-block;
+    float: center;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    width: 130px; height: 28px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    -moz-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    line-height:28px;
+
+}
+
+
+/* posizionamento del riquadro di testo all'interno del singolo smart life  */
+.smart_txt_div{
+    padding: 5% 5% 5% 5%;
+    position: absolute;
+    top: 20%;
+    right: 0%;
+     width: 50%;
+}
+
+/* posizionamento del testo nei riquadri principali */
+.smart_txt{
+        align-self: flex-end;
+        color: #0b3d86;
+        text-align: center;
+    }
+
+@media (max-width: 467px) {
+    .smart_txt{
+        font-size: 0.8em;
+    }
+}
+@media (min-width: 468px) {
+    .smart_txt {
+        align-self: flex-end;
+        color: #0b3d86;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.2em;
+        text-align: center;
+    }
+}
+
+.smart_title{
+    align-self: flex-end;
+    color: #0b3d86;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 467px) {
+    .smart_title {
+        font-size: 0.8em;
+
+    }
+}
+
+@media (min-width: 468px) {
+    .smart_title {
+        font-size: 1.5em;
+
+    }
+}
+
