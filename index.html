@@ -20,69 +20,9 @@
 <![endif]-->
     </head>
     <body>
-        <!-- Header e barra di navigazione -->
-        <header>
-            <nav class="navbar-nav navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#"><img src="images/logo_trans_small.png"></a>
-                    </div>
-                    <div class="collapse navbar-collapse navbar-responsive-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prodotti<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Tutti</a></li>
-                                    <li><a href="#">Categorie</a></li>
-                                    <li><a href="#">Promozione</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SmartLife<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Tutti</a></li>
-                                    <li><a href="#">Categorie</a></li>
-                                    <li><a href="#">Promozione</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Assistenza<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Tutti</a></li>
-                                    <li><a href="#">Categorie</a></li>
-                                    <li><a href="#">In evidenza</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chi siamo<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Innovazione</a></li>
-                                    <li><a href="#">Testimonials</a></li>
-                                    <li><a href="#">Progetti</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Il Gruppo<span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="disabled" href="#">Descrizione</a></li>
-                                    <li><a class="disabled" href="#">News</a></li>
-                                    <li><a class="disabled" href="#">Governance</a></li>
-                                    <li><a class="disabled" href="#">Business e Mercato</a></li>
-                                    <li><a class="disabled" href="#">Per gli Investitori</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div><!-- /.nav-collapse -->
-                </div>
-            </nav>
-        </header>
+        <!-- Includo navbar da altro file -->
+        <header id="includedNavbar"></header>
+
         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:-19px;">
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class=""></li>
@@ -147,35 +87,19 @@
         </div>
 
 
-        <!-- Footer -->
-        <footer class="panel-footer">
-            <section id="footer-copy">
-                <div class="row">
-                    <div class="col-md-8">
-                        <ul class="myMenuFooter">
-                            <li>Privacy</li>
-                            <li>Informazioni sito</li>
-                            <li>Lavora con noi</li>
-                            <li>Seguici:</li>
-                            <li><img src="images/socials/fb-logo-bn.png" height="26"></li>
-                            <li><img src="images/socials/twitter-logo.png" height="26"></li>
-                            <li><img src="images/socials/gplus-logo.png" height="26"></li>
-                            <li><img src="images/socials/youtube-logo.png" height="26"></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <ul class="myMenuFooter">
-                            <li>Telecom Italia 2012 - P.IVA 00488410010</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </footer>
-
+        <!-- Includo footer da altro file -->
+        <footer id="includedFooter" class="panel-footer"></footer>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/bootsrap/js/bootstrap.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Include navbar e footer dai rispettivi componenti html -->
+        <script>
+            $(function(){
+                $("#includedNavbar").load("/html-componenti/navbar.html");
+                $("#includedFooter").load("/html-componenti/footer.html");
+            });
+        </script>
     </body>
 </html>
