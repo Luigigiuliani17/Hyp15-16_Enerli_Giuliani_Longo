@@ -24,13 +24,13 @@ function getFromDB(id){
         success: function(response) {
             console.log(JSON.parse(response));
             var obj=JSON.parse(response);
-            var result = "";
+            var result = "<div class=\"row\"> <ul id=\"lista\" type=\"disc\">";
 
             for(var i = 0; i < obj.length; i++){
-                result = result + " <div > <h3> id:" + obj[i].id +"</h3>  lol:" + obj[i].Descrizione+ "</div>";
+                result = result + "<li><a href &quot;www.tiim.altervista.org&quot;=>" + obj[i].nome +"</a></li>";
 
             }
-
+            result = result + "</ul> </div>";
             $("#thumblist").html(result);
         },
         error: function(request,error)
