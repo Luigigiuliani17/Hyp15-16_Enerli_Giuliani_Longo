@@ -28,7 +28,7 @@ function getFromDB(id){
             var result = "";
 
             for(var i = 0; i < obj.length; i++){
-                result = result + " <div > <h3> id:" + obj.id  +"</h3>  lol:" + obj.lol + "lol2:" + obj.lol2 + "</div>";
+                result = result + " <div > <h3> id:" + obj.[i]id +"</h3>  lol:" + obj[i].lol + "lol2:" + obj[i].lol2 + "</div>";
 
             }
 
