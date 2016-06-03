@@ -55,19 +55,21 @@ function getFromDB(type){
         success: function(response) {
             // in categorie dovrebbe esserci un vettore di elementi categoria
             var categorie = JSON.parse(response);
-            // creo una variabile stringa per contenere il path:
+            // path dinamico
             var path = "";
-            // costruisco il path a seconda del tipo di categorie:
+			// costruisco il path a seconda del tipo di categorie:
             switch (parseInt(categorie[0].tipo)) {
             	case 1:
-                	path = "";
                 	path += '<a  href="prodottiTutti.html">> Prodotti</a> > Categorie';
+                    break;
                 case 2:
-                	path = "";
                 	path += '<a  href="serviziTutti.html">> Smart Life</a> > Categorie';
+                    break;
                 case 3:
-                	path = "";
                 	path += '<a  href="assistenzaTutti.html">> Assistenza</a> > Categorie';
+                  	break;
+                default:
+                	path += 'lol something wrong';
             }
             // creo una variabile stringa per contenere la somma delle singole descrizioni
             var desc = "";
