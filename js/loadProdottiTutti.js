@@ -22,36 +22,48 @@ function getFromDB(){
             var res = "";
             // in prodotti dovrebbe esserci un vettore di elementi prodotti di tutte le categorie.
             var prodotti = JSON.parse(response);
-            // li voglio ordinare per categoria
+            console.log(prodotti);
             for (var cat = 1; cat <= 5; cat ++) {
-                res += '<div class="container marketing">';
-                res +=  '<div class="row prod-title">';
-                res +=      '<img src="/images/categorie/' + prodotti[0].icon_cat + '"/>';
-                res +=      prodotti[0].nome_cat + '(' + prodotti.length +')';
-                res +=  '</div>';
-                // inizia la riga dei prodotti:
-                res +=  '<div class="row">'
-                // raccolta dei prodotti
-                for (var i = 0; i < prodotti.length; i++) {
-                    if (prodotti[i].categoria == cat) {
+                console.log(cat);
+                // per ogni categoria creo un nuovo vettore di prodotti
+                var prodByCat = [];
+                console.log(prodByCat);
+                for (var prod = 0; prod < prodotti.length; prod++) {
+                    if (prodotti[prod].categoria == cat) {
+                        prodByCat.push(prodotti[prod]);
+                    }
+                }
+                // se c'è almeno un prodotto per quella categoria:
+                if (prodByCat.length > 0) {
+                    // creo l'introduzione
+                    res += '<div class="container marketing">';
+                    res +=  '<div class="row prod-title">';
+                    res +=      '<img src="/images/categorie/' + prodByCat[0].icon_cat + '"/>';
+                    res +=      ' ' + '<a href="prodottiPerCategoria.html?id=' + prodByCat[0].categoria + '">' + prodByCat[0].nome_cat + ' (' + prodByCat.length +')</a>';
+                    res +=  '</div>';
+                    // inizia la riga dei prodotti:
+                    res +=  '<div class="row">'
+                    // raccolta dei prodotti
+                    for (var i = 0; i < prodByCat.length; i++) {
                         // costruisco iun thumbnail per ogni prodotto
                         res += '<div class="col-xs-12 col-sm-6 col-md-3">';
                         res += 	'<div class="thumbnail">';
-                        res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                        res += 		'<img src="/images/prodotti/anteprime/'+ prodByCat[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
                         res +=          '<div class="caption">';
-                        res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '"><h4>' + prodotti[i].nome_prod +'</h4></a>';
-                        res += 		       '<h5>' + prodotti[i].prezzo + '</h5>'
+                        res += 		       '<a href="prodotto.html?id=' + prodByCat[i].prod_id + '"><h4>' + prodByCat[i].nome_prod +'</h4></a>';
+                        res += 		       '<h5>' + prodByCat[i].prezzo + '</h5>'
                         res += 		       '<a href="#" class="button buttonDB">Dettagli</a>';
                         res += 	        '</div>';
                         res +=  '</div>';
                         res += '</div>';
                     }
+                    // chiudo il container della categoria
+                    res +=  '</div>';
+                    res += '</div>';
                 }
-                res +=  '</div>';
-                res += '</div>';
             }
             $("#all-prod").html(res);
-        },
+        },//chiude success
         error: function(request,error)
         {
             console.log("Error");
