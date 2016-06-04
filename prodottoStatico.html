@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>TIM - I nostri Prodotti</title>
+
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
+        <link href="css/tim_style.css" rel="stylesheet">
+        <link href="css/prodotti.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+    </head>
+    <body>
+        <!-- Includo navbar da altro file -->
+        <header id="includedNavbar"></header>
+
+        <div class="path">
+            > prodotti > stocazz > ifonzie
+        </div>
+        <!-- Riquadro con la presentazione del prodotto -->
+        <div class="container marketing">
+            <h2>Nome</h2>
+            <div class="row">
+                <!-- descrizione -->
+                <div class="col-xs-12 col-sm-6 col-sm-push-6">
+                    <h4>nome</h4>
+
+                </div>
+                <!-- slider delle immagini del prodotto, a sinistra, ma che se ridotto lo schermo va dopo la descrizione -->
+                <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                    <div class="tabbable">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="im1">
+                                <img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_01.jpg" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="tab-pane" id="im2">
+                                <img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_02.jpg" alt="" class="img-responsive"/>
+                            </div>
+                            <div class="tab-pane" id="im3">
+                                <img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_03.jpg" alt="" class="img-responsive"/>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_01.jpg" alt="" class="img-responsive"/></a></li>
+                            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im2" data-toggle="tab"><img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_02.jpg" alt="" class="img-responsive"/></a></li>
+                            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im3" data-toggle="tab"><img src="images/prodotti/APPLE_OIPHONE_SE_spacegrey_03.jpg" alt="" class="img-responsive"/></a></li>
+                        </ul>
+                    </div><!-- /tabs -->
+                </div><!-- /end slider -->
+            </div><!-- /end row -->
+        </div><!-- / fine presentazione -->
+        <!-- Riquadro con la descrizione del prodotto -->
+        <div class="container marketing">
+            <h2>Descrizione</h2>
+        </div>
+        <!-- Riquadro con le specifiche tecniche del prodotto -->
+        <div class="container marketing">
+            <h2>Specifiche Tecniche</h2>
+        </div>
+        <!-- Riquadro con i servizi compatibili con il prodotto -->
+        <div class="container marketing">
+            <h2>Smart Life per questo prodotto</h2>
+        </div>
+        <!-- Riquadro con l'assistenza compatibile col prodotto -->
+        <div class="container marketing">
+            <h2>Assistenza per questo prodotto</h2>
+        </div>
+        <!-- Riquadro con il form per acquistare il prodotto -->
+        <div class="container marketing">
+            <h2>Acquista</h2>
+        </div>
+        <!-- Includo footer da altro file -->
+        <footer id="includedFooter" class="panel-footer"></footer>
+
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                $("#includedNavbar").load("/html-componenti/navbar.html");
+                $("#includedFooter").load("/html-componenti/footer.html");
+            });
+        </script>
+    </body>
+</html>

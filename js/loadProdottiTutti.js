@@ -39,7 +39,7 @@ function getFromDB(){
                     res += '<div class="container marketing">';
                     res +=  '<div class="row prod-title">';
                     res +=      '<img src="/images/categorie/' + prodByCat[0].icon_cat + '"/>';
-                    res +=      ' ' + '<a href="prodottiPerCategoria.html?id=' + prodByCat[0].categoria + '">' + prodByCat[0].nome_cat + ' (' + prodByCat.length +')</a>';
+                    res +=      ' ' + '<a href="prodottiPerCategoria.html?cat_id=' + prodByCat[0].categoria + '">' + prodByCat[0].nome_cat + ' (' + prodByCat.length +')</a>';
                     res +=  '</div>';
                     // inizia la riga dei prodotti:
                     res +=  '<div class="row">'

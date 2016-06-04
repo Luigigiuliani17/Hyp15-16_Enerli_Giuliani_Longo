@@ -86,3 +86,52 @@ a.buttonDB:hover, a.buttonSB:hover {
     -moz-box-shadow: none;
     box-shadow: none;
 }
+
+h2 {
+    color: #0b3d86;
+    font-size: 24px;
+}
+@media(max-width:767px) {
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/*** MODIFICHE PER LA PAGINA DEI SINGOLI PRODOTTI ***/
+/* modifico lo stile dei tab nello slider delle immagini prodotti */
+.nav-tabs > li > a > img {
+    width: 100%;
+}
+.tab-pane > img {
+    max-width: 100%;
+}
+.tab-pane {
+    align-content: center;
+}
+.nav-tabs {
+    border-top: 0px;
+    border-bottom: 0px;
+}
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 0px solid transparent;
+    border-radius: 0px 0px 0 0;
+}
+.nav-tabs > li > a:hover {
+    border: 1px solid;
+    border-color: #dddddd #dddddd #dddddd;
+    background-color: #fff;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #fff;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+    border-color: #0b3d86;
+}
