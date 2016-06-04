@@ -2,17 +2,6 @@
 // ritrova le categorie dal database e risponde con un JSON object
 $type=$_POST["categorie_tipo"];
 
-switch($type){
-    case "prodotti":
-        $ordering = 'name';
-        break;
-    case "smartlife":
-        $ordering = 'difficulty';
-        break;
-    case "assistenza":
-        $ordering = 'difficulty';
-        break;
-}
 // prova a stabilire una connessione con il database
 $mysqli = new mysqli("localhost", "root", "", "my_tiim");
 

@@ -68,6 +68,13 @@ body {
     margin-bottom: 40px;
     border-radius: 8px;
 }
+/* riduco il padding su schermi piccoli */
+@media (max-width:767px){
+    .container.marketing {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+}
 
 /* per evitare lo scroll orizzontale */
 .row {
