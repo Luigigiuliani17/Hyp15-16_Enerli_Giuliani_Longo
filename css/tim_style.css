@@ -69,11 +69,27 @@ body {
     margin-bottom: 40px;
     border-radius: 8px;
 }
+
+/* riquadro bianco contenente la navigazione all'interno della pagina */
+.container.navigation {
+    align-self: center;
+    max-width: 90%;
+    background-color: white;
+    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
 /* riduco il padding su schermi piccoli */
 @media (max-width:767px){
     .container.marketing {
         padding: 20px;
         padding-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .container.navigation {
+        padding: 20px;
         margin-bottom: 30px;
     }
 }
