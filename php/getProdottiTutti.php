@@ -10,7 +10,8 @@ if (mysqli_connect_errno()) {
 else {
     // connessione ok
     # extract results mysqli_result::fetch_array
-    $query = " SELECT prod_id, nome, thumbnail, prezzo, categoria FROM prodotti";
+    // seleziono tutti i prodotti aggiungendo il nome della categoria e l'icona
+    $query = " SELECT prod_id, Prodotti.nome AS nome_prod, thumbnail, prezzo, Categorie.nome AS nome_cat, icon AS icon_cat FROM `Prodotti` JOIN `Categorie` ON categoria = cat_id";
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array
