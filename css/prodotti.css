@@ -25,7 +25,7 @@
 /* modifiche allo stile del percorso dalla home alla pagina attuale */
 .path {
     align-self: center;
-    max-width: 100%;
+    max-width: 90%;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -77,16 +77,41 @@ a.buttonDB {
     position: relative;
     line-height:28px;
 }
-
+/*bottone acquista rosso*/
+a.acquistaR {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+    float: center;
+    text-align: center;
+    text-decoration: none;
+    width: 180px; height: 28px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #EA1F05;
+    -webkit-box-shadow: 0 3px rgba(255,35,50,.75);
+    -moz-box-shadow: 0 3px rgba(255,35,50,.75);
+    box-shadow: 0 3px rgba(255,35,50,.75);
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    position: relative;
+    line-height:28px;
+}
 /* passaggio del cursore sul bottone elimina l'ombra*/
-a.buttonDB:hover, a.buttonSB:hover {
+a.buttonDB:hover, a.buttonSB:hover, a.acquistaR:hover {
     top: 3px;
     background-color: rgba( 193, 193, 193, 0.90 );
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
+a.acquistaR:hover {
+    background-color: #B21800;
+}
 
+/*formato dei titoli*/
 h2 {
     color: #0b3d86;
     font-size: 24px;
@@ -96,9 +121,38 @@ h2 {
         font-size: 18px;
     }
 }
+h3 {
+    color: #0b3d86;
+    font-size: 18px;
+}
+@media(max-width:767px) {
+    h3 {
+        font-size: 16px;
+    }
+}
+#prezzaccio {
+    color: #EA1F05;
+}
+hr {
+    width: 80%;
+    border-top: 1px dotted #0b3d86;
+}
+
+.caratt-basic {
+    padding-left: 20%;
+}
+.centered {
+    text-align: center;
+}
+
+
 
 /*** MODIFICHE PER LA PAGINA DEI SINGOLI PRODOTTI ***/
 /* modifico lo stile dei tab nello slider delle immagini prodotti */
+.tab-content {
+    padding-left: 15%;
+    padding-right: 15%;
+}
 .nav-tabs > li > a > img {
     width: 100%;
 }
@@ -106,7 +160,8 @@ h2 {
     max-width: 100%;
 }
 .tab-pane {
-    align-content: center;
+    max-width: 400px;
+    margin-top: 10px;
 }
 .nav-tabs {
     border-top: 0px;
@@ -134,4 +189,35 @@ h2 {
     background-color: #fff;
     border: 1px solid #dddddd;
     border-color: #0b3d86;
+}
+
+/** STILI TABELLA SPECIFICHE **/
+.tg  {
+    width: 100%;
+    border-collapse:collapse;
+    border-spacing:0;
+    border-color:#999;
+    border:none;
+}
+.tg td{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    padding:10px 5px;
+    border-style:solid;
+    border-width:0px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:#999;
+    color:#444;
+    background-color:#F7FDFA;}
+
+.tg .tg-yw4l {
+    vertical-align:top
+}
+.tg .tg-6k2t {
+    background-color:#D2E4FC;
+    vertical-align:top
+}
+.tg .tg-1col {
+    font-weight: 800;
 }
