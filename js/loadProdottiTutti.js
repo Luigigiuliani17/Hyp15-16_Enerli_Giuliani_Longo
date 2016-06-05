@@ -52,7 +52,7 @@ function getFromDB(){
                         res +=          '<div class="caption">';
                         res += 		       '<a href="prodotto.html?id=' + prodByCat[i].prod_id + '"><h4>' + prodByCat[i].nome_prod +'</h4></a>';
                         res += 		       '<h5>' + prodByCat[i].prezzo + ' &euro;</h5>'
-                        res += 		       '<a href="prodotto.html?id=' + prodByCat[i].id + '" class="button buttonDB">Dettagli</a>';
+                        res += 		       '<a href="prodotto.html?id=' + prodByCat[i].prod_id + '" class="button buttonDB">Dettagli</a>';
                         res += 	        '</div>';
                         res +=  '</div>';
                         res += '</div>';

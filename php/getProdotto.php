@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) { //verify connection
 // più gli id del prodotto precedente e del prossimo
 else {
     # extract results mysqli_result::fetch_array
-    $query = " SELECT prod_id, prodotti.nome AS nome_prod, prezzo, img1, img2, img3, descrizione, caratteristiche, specifiche, cat_id, categorie.nome AS nome_cat FROM prodotti join categorie on categoria = cat_id WHERE prodotti.prod_id = $prod_id ";
+    $query = " SELECT prod_id, Prodotti.nome AS nome_prod, prezzo, img1, img2, img3, Prodotti.descrizione, caratteristiche, specifiche, cat_id, Categorie.nome AS nome_cat FROM Prodotti join Categorie on categoria = cat_id WHERE prod_id = $prod_id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
