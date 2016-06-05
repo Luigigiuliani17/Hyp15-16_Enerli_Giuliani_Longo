@@ -111,6 +111,24 @@ a.acquistaR:hover {
     background-color: #B21800;
 }
 
+/** STILI PROSSIMO E PRECEDENTE **/
+.dx {
+    font-size: 16px;
+    text-align: right;
+    color: #0b3d86;
+}
+.sx {
+    font-size: 16px;
+    text-align: left;
+    color: #0b3d86;
+}
+.dx > a, .sx > a {
+    font-size: 20px;
+    color: #0b3d86;
+}
+.cgt {
+    padding-top: 20px;
+}
 /*formato dei titoli*/
 h2 {
     color: #0b3d86;
@@ -143,8 +161,9 @@ hr {
 }
 .centered {
     text-align: center;
+    align-content: center;
+    padding: 10px;
 }
-
 
 
 /*** MODIFICHE PER LA PAGINA DEI SINGOLI PRODOTTI ***/
@@ -168,6 +187,7 @@ hr {
     border-bottom: 0px;
 }
 .nav-tabs > li {
+    padding: 0px;
     float: left;
     margin-bottom: -1px;
 }
