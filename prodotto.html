@@ -40,7 +40,7 @@
                         <hr>
                         <h3 id="prezzaccio"><!-- contenuto dinamico --></h3>
                         <hr>
-                        <a href="#" class="button acquistaR">ACQUISTA</a>
+                        <a href="#acquista" class="button acquistaR">ACQUISTA</a>
                     </div>
                 </div>
                 <!-- slider delle immagini del prodotto, a sinistra, ma che se ridotto lo schermo va dopo la descrizione -->
@@ -64,10 +64,10 @@
                 </div><!-- /end slider -->
             </div><!-- /end row -->
             <div class="row cgt">
-                <div class="col-xs-2 dx" id="prev-prod"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+                <div class="col-xs-2 dx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
                 <div class="col-xs-4 sx">precedente</div>
                 <div class="col-xs-4 dx">prossimo</div>
-                <div class="col-xs-2 sx" id="next-prod"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                <div class="col-xs-2 sx"><a  id="next-prod" href=""><span class="glyphicon glyphicon-chevron-right"></span></a></div>
             </div>
         </div><!-- / fine presentazione -->
         <!-- Riquadro con la descrizione del prodotto -->
@@ -91,7 +91,7 @@
             <h2>Assistenza per questo prodotto</h2>
         </div>
         <!-- Riquadro con il form per acquistare il prodotto -->
-        <div class="container marketing">
+        <div id="acquista" class="container marketing">
             <h2>Acquista</h2>
         </div>
         <!-- Includo footer da altro file -->

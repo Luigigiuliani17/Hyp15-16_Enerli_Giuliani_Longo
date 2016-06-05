@@ -61,7 +61,7 @@ function getFromDB(id){
             prezzo += " &euro;";
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
             $("#path").html(path);
-            $("#nome_prod").html(prodotto.nome_prod);
+            $("#nome-prod").html(prodotto.nome_prod);
             $("#descrizione").html(prodotto.descrizione);
             $("#prezzaccio").html(prezzo);
 
