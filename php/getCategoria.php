@@ -1,6 +1,5 @@
 <?php
-// prende tutte le caratteristiche necessarie di tutti i prodotti di una categoria da database e li mette in un json
-// Ci serve l'id, il nome dell'immagine anteprima, il nome del prodotto, il prezzo,
+// prende nome, icona della categoria richiesta:
 $cat=$_POST["categoria"];
 // prova a stabilire una connessione con il database
 $mysqli = new mysqli("localhost", "root", "", "my_tiim");
@@ -12,7 +11,7 @@ if (mysqli_connect_errno()) {
 else {
     // connessione ok
     # extract results mysqli_result::fetch_array
-    $query = " SELECT prod_id, Prodotti.nome AS nome_prod, thumbnail, prezzo FROM `Prodotti` WHERE categoria = $cat";
+    $query = " SELECT Categorie.nome AS nome_cat, icon, count(*) AS num_prod FROM `Categorie` JOIN `Prodotti` ON cat_id = categoria WHERE cat_id = $cat ";
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array

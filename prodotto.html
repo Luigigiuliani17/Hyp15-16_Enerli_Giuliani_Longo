@@ -23,6 +23,26 @@
         <!-- Includo navbar da altro file -->
         <header id="includedNavbar"></header>
 
+        <nav class="second-navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sec-nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="titolo-nav" class="navbar-brand" href="#"></a>
+            </div>
+            <div class="sec-nav-collapse collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="navbar-right nav navbar-nav">
+                    <li><a href="#desc">Descrizione</a></li>
+                    <li><a href="#spec">Specifiche tecniche</a></li>
+                    <li><a href="#sl">Smart Life</a></li>
+                    <li><a href="#ass">Assistenza</a></li>
+                    <li><a href="#acq">Acquista</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div id="path" class="path">
             <!-- contenuto dinamico -->
         </div>
@@ -70,30 +90,47 @@
                 <div class="col-xs-2 sx"><a  id="next-prod" href=""><span class="glyphicon glyphicon-chevron-right"></span></a></div>
             </div>
         </div><!-- / fine presentazione -->
-        <!-- Riquadro con la descrizione del prodotto -->
-        <div class="container marketing">
-            <h2>Descrizione</h2>
-            <div id="descrizione"><!-- contenuto dinamico --></div>
-        </div>
-        <!-- Riquadro con le specifiche tecniche del prodotto -->
-        <div class="container marketing">
-            <h2>Specifiche Tecniche</h2>
-            <div id="spec-tech" class="table-responsive"><!-- contenuto dinamico --></div>
-        </div>
 
 
-        <!-- Riquadro con i servizi compatibili con il prodotto -->
-        <div class="container marketing">
-            <h2>Smart Life per questo prodotto</h2>
-        </div>
-        <!-- Riquadro con l'assistenza compatibile col prodotto -->
-        <div class="container marketing">
-            <h2>Assistenza per questo prodotto</h2>
-        </div>
-        <!-- Riquadro con il form per acquistare il prodotto -->
-        <div id="acquista" class="container marketing">
-            <h2>Acquista</h2>
-        </div>
+        <section id="desc">
+            <!-- Riquadro con la descrizione del prodotto -->
+            <div class="container marketing">
+                <h2>Descrizione</h2>
+                <div id="descrizione"><!-- contenuto dinamico --></div>
+            </div>
+        </section>
+
+        <section id="spec">
+            <!-- Riquadro con le specifiche tecniche del prodotto -->
+            <div class="container marketing">
+                <h2>Specifiche Tecniche</h2>
+                <div id="spec-tech" class="table-responsive"><!-- contenuto dinamico --></div>
+            </div>
+        </section>
+
+        <section id="sl">
+            <!-- Riquadro con i servizi compatibili con il prodotto -->
+            <div class="container marketing">
+                <h2>Smart Life per questo prodotto</h2>
+            </div>
+        </section>
+
+        <section id="ass">
+            <!-- Riquadro con l'assistenza compatibile col prodotto -->
+            <div class="container marketing">
+                <h2>Assistenza per questo prodotto</h2>
+            </div>
+        </section>
+
+
+        <section id="acq">
+            <!-- Riquadro con il form per acquistare il prodotto -->
+            <div id="acquista" class="container marketing">
+                <h2>Acquista</h2>
+            </div>
+        </section>
+
+
         <!-- Includo footer da altro file -->
         <footer id="includedFooter" class="panel-footer"></footer>
 
@@ -105,6 +142,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="/js/loadProdotto.js"></script>
+        <script src="/js/second-nav-scrolling.js"></script>
         <script>
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
