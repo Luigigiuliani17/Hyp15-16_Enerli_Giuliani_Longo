@@ -36,3 +36,38 @@ ul#lista_promo li {
 ul + ul {
     margin-top: -9px;
 }
+
+/*spazio tra nome e descrizione*/
+h2 + h4 {
+    margin-top: 4%;
+}
+
+/*modifica stile del titolo*/
+#nome_ass {
+    color: #0b3d86;
+    font-weight: bold;
+    padding-top: 0px;
+}
+
+/** STILI PROSSIMO E PRECEDENTE **/
+.dx {
+    font-size: 16px;
+    text-align: right;
+    color: #0b3d86;
+}
+.sx {
+    font-size: 16px;
+    text-align: left;
+    color: #0b3d86;
+}
+.dx > a, .sx > a {
+    font-size: 20px;
+    color: #0b3d86;
+}
+.cgt {
+    padding-top: 20px;
+}
+
+.text {
+    padding-left: 3%;
+}
