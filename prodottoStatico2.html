@@ -20,9 +20,6 @@
 <![endif]-->
     </head>
     <body>
-        <!-- Includo navbar da altro file -->
-        <header id="includedNavbar"></header>
-
         <nav class="second-navbar navbar-inverse">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sec-nav-collapse">
@@ -42,6 +39,8 @@
                 </ul>
             </div>
         </nav>
+
+
         <div class="path">
             > prodotti > stocazz > ifonzie
         </div>
@@ -99,15 +98,14 @@
         </div><!-- / fine presentazione -->
         <!-- Riquadro con la descrizione del prodotto -->
         <section id="desc">
-            <div class="container marketing">
+            <div id="desc" class="container marketing">
                 <h2>Descrizione</h2>
                 blabla
             </div>
         </section>
-
         <!-- Riquadro con le specifiche tecniche del prodotto -->
         <section id="spec">
-            <div class="container marketing">
+            <div id="spec" class="container marketing">
                 <h2>Specifiche Tecniche</h2>
 
                 <div class="table-responsive">
@@ -164,28 +162,24 @@
                 </div>
             </div>
         </section>
-
         <!-- Riquadro con i servizi compatibili con il prodotto -->
         <section id="sl">
             <div class="container marketing">
                 <h2>Smart Life per questo prodotto</h2>
             </div>
         </section>
-
         <!-- Riquadro con l'assistenza compatibile col prodotto -->
         <section id="ass">
             <div class="container marketing">
                 <h2>Assistenza per questo prodotto</h2>
             </div>
         </section>
-
         <!-- Riquadro con il form per acquistare il prodotto -->
         <section id="acq">
             <div class="container marketing">
                 <h2>Acquista</h2>
             </div>
         </section>
-
         <!-- Includo footer da altro file -->
         <footer id="includedFooter" class="panel-footer"></footer>
 
@@ -196,12 +190,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/second-nav-scrolling.js"></script>
         <script>
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
                 $("#includedFooter").load("/html-componenti/footer.html");
             });
         </script>
+        <script src="js/second-nav-scrolling.js"></script>
     </body>
 </html>

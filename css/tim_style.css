@@ -61,35 +61,19 @@ body {
 /* riquadro bianco contenente i vari sotto-riquadri nelle pagine */
 .container.marketing {
     align-self: center;
-    max-width: 90%;
+    max-width: 100%;
     background-color: white;
     padding: 40px;
-    padding-top: 10px;
-    margin-top: 0px;
+    margin-top: 40px;
     margin-bottom: 40px;
     border-radius: 8px;
 }
 
-/* riquadro bianco contenente la navigazione all'interno della pagina */
-.container.navigation {
-    align-self: center;
-    max-width: 90%;
-    background-color: white;
-    padding: 5px;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    border-radius: 8px;
-}
 /* riduco il padding su schermi piccoli */
 @media (max-width:767px){
     .container.marketing {
         padding: 20px;
         padding-top: 10px;
-        margin-bottom: 30px;
-    }
-
-    .container.navigation {
-        padding: 20px;
         margin-bottom: 30px;
     }
 }
@@ -110,4 +94,65 @@ a.disabled {
     .navbar-nav, .navbar-inverse, .navbar-fixed-top {
         top: -10px;
     }
+}
+
+
+
+/* SECOND NAVBAR NAVIGATION */
+nav.second-navbar.navbar-inverse {
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    background: #eee;
+}
+@media (max-width:767px){
+    nav.second-navbar.navbar-inverse {
+        top: 48px;
+    }
+}
+nav.second-navbar.navbar-inverse ul {
+    padding: 0px;
+    padding-top: 13px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+nav.second-navbar.navbar-inverse {
+
+}
+
+@media only screen and (max-width: 766px) {
+.second-navbar > .collapsing, .second-navbar > .in {background-color: #eee;}
+.second-navbar > .collapsing ul li a, .second-navbar > .in ul li a {color: #0b3d86!important;}
+.second-navbar > .collapsing ul li a:hover, .second-navbar > .in ul li a:hover {color: #135EBD!important;}
+}
+
+nav.second-navbar.navbar-inverse ul li {
+    margin: 0 10px;
+}
+nav.second-navbar.navbar-inverse ul li a {
+    padding: 2px 0;
+    color: #0b3d86;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+nav.second-navbar.navbar-inverse ul li a:hover {
+    color: #135EBD;
+    background-color: #eee;
+}
+a.active {
+    color: #135EBD;
+    border-bottom: 10px solid #135EBD;
+}
+nav.second-navbar.navbar-inverse >  .navbar-nav .nav  .navbar-left {
+    font-size: 1.2em;
+}
+nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+    color: #0b3d86;
+    font-weight: 600;
 }

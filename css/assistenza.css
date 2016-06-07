@@ -36,3 +36,48 @@ ul#lista_promo li {
 ul + ul {
     margin-top: -9px;
 }
+
+/*spazio tra nome e titolo*/
+h2 + h3 {
+    margin-top: 7%;
+}
+
+/*spazio tra titolo e descrizione*/
+h3 + h4 {
+    margin-top: 3%;
+}
+
+/*modifica stile del nome dell'assistenza*/
+#nome_ass {
+    color: #0b3d86;
+    font-weight: bold;
+    padding-top: 0px;
+}
+
+/*modifica stile del titolo*/
+.title {
+    color: cornflowerblue;
+}
+
+/** STILI PROSSIMO E PRECEDENTE **/
+.dx {
+    font-size: 16px;
+    text-align: right;
+    color: #0b3d86;
+}
+.sx {
+    font-size: 16px;
+    text-align: left;
+    color: #0b3d86;
+}
+.dx > a, .sx > a {
+    font-size: 20px;
+    color: #0b3d86;
+}
+.cgt {
+    padding-top: 20px;
+}
+
+.text {
+    padding-left: 3%;
+}
