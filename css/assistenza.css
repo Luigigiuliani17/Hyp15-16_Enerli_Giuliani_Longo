@@ -37,12 +37,12 @@ ul + ul {
     margin-top: -9px;
 }
 
-/*spazio tra nome e titolo*/
+/*spazio tra titolo e sottotitolo*/
 h2 + h3 {
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
-/*spazio tra titolo e descrizione*/
+/*spazio tra nome e descrizione*/
 h3 + h4 {
     margin-top: 3%;
 }
