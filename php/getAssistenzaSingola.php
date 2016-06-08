@@ -1,6 +1,6 @@
 <?php
 // ritrova le categorie dal database e risponde con un JSON object
-$prod_id=$_POST["prod_id"];
+$ass_id=$_POST["ass_id"];
 
 // prova a stabilire una connessione con il database
 $mysqli = new mysqli("localhost", "root", "", "my_tiim");
@@ -15,7 +15,8 @@ if (mysqli_connect_errno()) { //verify connection
 // più gli id del prodotto precedente e del prossimo
 else {
     # extract results mysqli_result::fetch_array
-    $query = " SELECT prod_id, Prodotti.nome AS nome_prod, prezzo, img1, img2, img3, Prodotti.descrizione, caratteristiche, specifiche, cat_id, promo, Categorie.nome AS nome_cat FROM Prodotti join Categorie on categoria = cat_id WHERE prod_id = $prod_id";
+    $query = "SELECT ass_id, Assistenza.nome AS nome_ass, Assistenza.descrizione, faq, promo, cat_id, Categorie.nome AS nome_cat
+    FROM Assistenza join Categorie on id_categoria_ass = cat_id WHERE ass_id = $ass_id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>TIM - I nostri Prodotti</title>
+        <title id="title"></title>
 
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@
             </div>
         </nav>
 
-        <div id="path" class="path">
+        <div id="path" class="path pathSingle">
             <!-- contenuto dinamico -->
         </div>
         <!-- Riquadro con la presentazione del prodotto -->
@@ -58,7 +58,8 @@
                     </div>
                     <div class="centered">
                         <hr>
-                        <h3 id="prezzaccio"><!-- contenuto dinamico --></h3>
+                        <h3 id="promo" class="red"></h3>
+                        <h3 id="prezzaccio" class="red"><!-- contenuto dinamico --></h3>
                         <hr>
                         <a href="#acquista" class="button acquistaR">ACQUISTA</a>
                     </div>
@@ -84,10 +85,8 @@
                 </div><!-- /end slider -->
             </div><!-- /end row -->
             <div class="row cgt">
-                <div class="col-xs-2 dx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
-                <div class="col-xs-4 sx">precedente</div>
-                <div class="col-xs-4 dx">prossimo</div>
-                <div class="col-xs-2 sx"><a  id="next-prod" href=""><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                <div class="col-xs-6 sx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span> precedente</a></div>
+                <div class="col-xs-6 dx"><a  id="next-prod" href="">prossimo <span class="glyphicon glyphicon-chevron-right"></span></a></div>
             </div>
         </div><!-- / fine presentazione -->
 
