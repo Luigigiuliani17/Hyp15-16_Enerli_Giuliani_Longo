@@ -50,18 +50,24 @@ function getFromDB(id){
             // in prodotto dovrebbe esserci un elemento richiesto
             var res = JSON.parse(response);
             var prodotto = res[0];
+            //titolo della pagina
+            $('#title').html('TIIM - '+prodotto.nome_prod);
             // path
             var path =  '<a  href="prodottiTutti.html">> Prodotti</a>';
             path +=     '<a  href="categorie.html?type=1"> > Categorie</a>';
             path +=     '<a  href="prodottiPerCategoria.html?cat_id='+ prodotto.cat_id +'"> > ' + prodotto.nome_cat + '</a>';
             path +=     ' > '+ prodotto.nome_prod;
 
+            if (prodotto.promo == 1) {
+                $('#promo').html('PRODOTTO IN PROMOZIONE');
+            }
             var prezzo = "";
             prezzo += prodotto.prezzo.toString();
             prezzo += " &euro;";
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
             $("#path").html(path);
             $("#nome-prod").html(prodotto.nome_prod);
+            $("#titolo-nav").html(prodotto.nome_prod);
             $("#descrizione").html(prodotto.descrizione);
             $("#prezzaccio").html(prezzo);
 
@@ -74,12 +80,12 @@ function getFromDB(id){
             $('#im1').html(image1);
 
             if (prodotto.img2 != null) {
-                tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/prodotti/' + prodotto.img2 + '" alt="" class="img-responsive"/></a></li>';
+                tab += '<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im2" data-toggle="tab"><img src="images/prodotti/' + prodotto.img2 + '" alt="" class="img-responsive"/></a></li>';
                 image2 += '<img src="images/prodotti/' + prodotto.img2 + '" alt="" class="img-responsive"/>';
                 $('#im2').html(image2);
             }
             if (prodotto.img3 != null) {
-                tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/prodotti/' + prodotto.img3 + '" alt="lol" class="img-responsive"/></a></li>';
+                tab += '<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im3" data-toggle="tab"><img src="images/prodotti/' + prodotto.img3 + '" alt="lol" class="img-responsive"/></a></li>';
                 image3 += '<img src="images/prodotti/' + prodotto.img3 + '" alt="lol" class="img-responsive"/>';
                 $('#im3').html(image3);
             }
@@ -114,7 +120,6 @@ function getFromDB(id){
             $("#spec-tech").html(spec_tec_str);
 
             //installa il guided tour circolare sui prodotti della stessa categoria
-            console.log("inizio a creare il cgt");
             getProdCGT(id, prodotto.cat_id);
         },
         error: function(request,error)
@@ -127,13 +132,11 @@ function getFromDB(id){
 
 function parsec (stringa) {
     var res = stringa.split('+');
-    console.log(res);
     return res;
 }
 
 function parsespec (stringa) {
     var res = stringa.split('+');
-    console.log(res);
     return res;
 }
 
@@ -150,7 +153,6 @@ function getProdCGT(prod_id, cat_id) {
         // prende tutti gli id e seleziona quelli opportuni da metter in next e previous
         success: function(response) {
             var next, previous;
-            console.log(JSON.parse(response));
             var ids=JSON.parse(response);
             // ricerca degli id voluti
             for(var i=0; i < ids.length; i++) {
