@@ -23,8 +23,27 @@
         <!-- Includo navbar da altro file -->
         <header id="includedNavbar"></header>
 
-        <div class="path">
-            > assistenza > stocazz > assminc
+        <nav class="second-navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sec-nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="titolo-nav" class="navbar-brand" href="#"></a>
+            </div>
+            <div class="sec-nav-collapse collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="navbar-right nav navbar-nav">
+                    <li><a href="#descrizione">Descrizione</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#prod">Prodotti</a></li>
+                    <li><a href="#contattaci">Contattaci</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="path" class="path">
+            <!-- contenuto dinamico -->
         </div>
         <!-- Riquadro con la presentazione del prodotto -->
         <div class="container marketing">
@@ -33,7 +52,7 @@
                 <h2 id="nome_ass"><!--contenuto dinamico --></h2>
 
                 <h3 class="title">Descrizione</h3>
-                <h4 id="descrizione"> <!--contenuto dinamico --></h4>
+                <ul id="descrizione"><!--contenuto dinamico --></ul>
             </div><!-- /end row -->
             <div class="row cgt">
                 <div class="col-xs-2 dx" id="prev"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
@@ -49,7 +68,7 @@
             <!-- Riquadro con le FAQ -->
             <div class="container marketing">
                 <h3 class= "title">FAQ</h3>
-                <h4 id="faq"><!--contenuto dinamico --></h4>
+                <ul id="faq"><!--contenuto dinamico --></ul>
             </div>
 
 
@@ -63,14 +82,12 @@
 
         <!-- Riquadro con il form per contattarci -->
         <div class="container marketing">
-            <h3 class = "title">Contattaci</h3>
+            <h3 class = "contattaci">Contattaci</h3>
         </div>
 
 
         <!-- Includo footer da altro file -->
         <footer id="includedFooter" class="panel-footer"></footer>
-
-
 
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -71,7 +71,7 @@ function getFromDB(id){
 
 
 
-            // gestione delle caratteristiche nella presentazione
+            // gestione della descrizione
             var descr_str = "";
             //parso le caratteristiche per creare diversi elementi di una lista
             var caratt = parsec(assistenza.descrizione);
@@ -80,6 +80,17 @@ function getFromDB(id){
             }
 
              $("#descrizione").html(descr_str);
+
+
+              // gestione delle FAQ
+            var faq_str = "";
+            //parso le caratteristiche per creare diversi elementi di una lista
+            var caratt = parsec(assistenza.faq);
+            for (var i = 0; i < caratt.length; i++) {
+                faq_str += '<li>' + caratt[i] +'</li>';
+            }
+
+             $("#faq").html(faq_str);
 		/*
             // gestione delle specifiche tecniche
             var spec_tec_str = '<table class="tg">';

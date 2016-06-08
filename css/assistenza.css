@@ -9,7 +9,7 @@
 /* modifiche allo stile del percorso dalla home alla pagina attuale */
 .path {
     align-self: center;
-    max-width: 100%;
+    max-width: 90%;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -78,6 +78,16 @@ h3 + h4 {
     padding-top: 20px;
 }
 
-.text {
+#text {
     padding-left: 3%;
+}
+
+#descrizione{
+    list-style-type:none;
+    font-size: 125%;
+}
+
+#faq{
+    list-style-type:none;
+    font-size: 125%;
 }
