@@ -11,7 +11,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "SELECT * FROM Assistenza";
+$query =  "SELECT ass_id, Assistenza.nome AS nome_ass, promo, cat_id, Categorie.nome AS nome_cat, icon AS icon_cat
+    FROM Assistenza JOIN Categorie ON id_categoria_ass = cat_id";
 $result = $conn->query($query);
 
 if($result->num_rows >0)

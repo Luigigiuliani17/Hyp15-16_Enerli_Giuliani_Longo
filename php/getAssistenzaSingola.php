@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) { //verify connection
 // più gli id del prodotto precedente e del prossimo
 else {
     # extract results mysqli_result::fetch_array
-    $query = " SELECT ass_id, Assistenza.nome AS nome_ass, Assistenza.descrizione, faq, promo, cat_id, Categorie.nome AS nome_cat
+    $query = "SELECT ass_id, Assistenza.nome AS nome_ass, Assistenza.descrizione, faq, promo, cat_id, Categorie.nome AS nome_cat
     FROM Assistenza join Categorie on id_categoria_ass = cat_id WHERE ass_id = $ass_id";
     //query execution
     $result = $mysqli->query($query);

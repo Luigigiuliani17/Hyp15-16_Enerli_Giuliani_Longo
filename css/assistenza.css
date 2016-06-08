@@ -14,6 +14,16 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+/* modifiche allo stile del percorso dalla home alla pagina del singolo prodotto */
+.pathSingle {
+    padding-top: 50px;
+}
+@media (max-width:767px){
+	.path {
+    	padding-bottom: 0px;
+    }
+}
 /* modifiche allo stile del titolo di ogni categoria*/
 .prod-title {
     color: #0b3d86;
