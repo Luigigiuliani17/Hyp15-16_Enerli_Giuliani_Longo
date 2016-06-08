@@ -9,7 +9,7 @@
 /* modifiche allo stile del percorso dalla home alla pagina attuale */
 .path {
     align-self: center;
-    max-width: 100%;
+    max-width: 90%;
     padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,16 +37,26 @@ ul + ul {
     margin-top: -9px;
 }
 
-/*spazio tra nome e descrizione*/
-h2 + h4 {
-    margin-top: 4%;
+/*spazio tra titolo e sottotitolo*/
+h2 + h3 {
+    margin-top: 5%;
 }
 
-/*modifica stile del titolo*/
+/*spazio tra nome e descrizione*/
+h3 + h4 {
+    margin-top: 3%;
+}
+
+/*modifica stile del nome dell'assistenza*/
 #nome_ass {
     color: #0b3d86;
     font-weight: bold;
     padding-top: 0px;
+}
+
+/*modifica stile del titolo*/
+.title {
+    color: cornflowerblue;
 }
 
 /** STILI PROSSIMO E PRECEDENTE **/
@@ -68,6 +78,16 @@ h2 + h4 {
     padding-top: 20px;
 }
 
-.text {
+#text {
     padding-left: 3%;
+}
+
+#descrizione{
+    list-style-type:none;
+    font-size: 125%;
+}
+
+#faq{
+    list-style-type:none;
+    font-size: 125%;
 }
