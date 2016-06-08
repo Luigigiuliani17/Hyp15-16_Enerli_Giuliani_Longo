@@ -26,7 +26,10 @@ function getCatFromDB(cat){
         success: function(response) {
 
             var categoria = JSON.parse(response);
-
+            // nome della pagina
+            $('#title').html('TIIM - ' + categoria[0].nome_cat);
+            // costruisco dinamicamente il path
+            $("#path").html('<a href="prodottiTutti.html">> Prodotti</a> <a href="categorie.html?type=1"> > Categorie</a> > ' + categoria[0].nome_cat);
             // introduzione: riquadro della categoria con icona e titolo
             $("#icon-cat").attr("src", "/images/categorie/" + categoria[0].icon);
             $("#nome-cat").html(categoria[0].nome_cat + ' ('+categoria[0].num_prod + ')');
@@ -55,12 +58,17 @@ function getProdFromDB(cat){
             for (var i = 0; i < prodotti.length; i++) {
                 // costruisco iun thumbnail per ogni prodotto
                 res += '<div class="col-xs-12 col-sm-6 col-md-3">';
-                res += 	'<div class="thumbnail">';
+                res += 	'<div class="thumbnail over">';
                 res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                if (prodotti[i].promo == 1) {
+                    res += '<span class="over-img">';
+                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res += '</span>';
+                }
                 res +=       '<div class="caption">';
                 res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '"><h4>' + prodotti[i].nome_prod +'</h4></a>';
                 res += 		       '<h5>' + prodotti[i].prezzo + ' &euro;</h5>'
-                res += 		       '<a href="#" class="button buttonDB">Dettagli</a>';
+                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '" class="button buttonDB">Dettagli</a>';
                 res += 	     '</div>';
                 res +=  '</div>';
                 res += '</div>';

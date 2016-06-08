@@ -22,12 +22,9 @@ function getFromDB(){
             var res = "";
             // in prodotti dovrebbe esserci un vettore di elementi prodotti di tutte le categorie.
             var prodotti = JSON.parse(response);
-            console.log(prodotti);
             for (var cat = 1; cat <= 5; cat ++) {
-                console.log(cat);
                 // per ogni categoria creo un nuovo vettore di prodotti
                 var prodByCat = [];
-                console.log(prodByCat);
                 for (var prod = 0; prod < prodotti.length; prod++) {
                     if (prodotti[prod].categoria == cat) {
                         prodByCat.push(prodotti[prod]);
@@ -47,8 +44,15 @@ function getFromDB(){
                     for (var i = 0; i < prodByCat.length; i++) {
                         // costruisco iun thumbnail per ogni prodotto
                         res += '<div class="col-xs-12 col-sm-6 col-md-3">';
-                        res += 	'<div class="thumbnail">';
+                        res += 	'<div class="thumbnail over">';
                         res += 		'<img src="/images/prodotti/anteprime/'+ prodByCat[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+
+                        if (prodByCat[i].promo == 1) {
+                            console.log('prodotto in promo');
+                            res += '<span class="over-img">';
+                            res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                            res += '</span>';
+                        }
                         res +=          '<div class="caption">';
                         res += 		       '<a href="prodotto.html?id=' + prodByCat[i].prod_id + '"><h4>' + prodByCat[i].nome_prod +'</h4></a>';
                         res += 		       '<h5>' + prodByCat[i].prezzo + ' &euro;</h5>'

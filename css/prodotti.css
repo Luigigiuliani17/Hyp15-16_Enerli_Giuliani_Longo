@@ -27,10 +27,18 @@
     align-self: center;
     max-width: 90%;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-
+/* modifiche allo stile del percorso dalla home alla pagina del singolo prodotto */
+.pathSingle {
+    padding-top: 50px;
+}
+@media (max-width:767px){
+	.path {
+    	padding-bottom: 0px;
+    }
+}
 /* modifiche allo stile del titolo di ogni categoria*/
 .prod-title a {
     color: #0b3d86;
@@ -113,22 +121,22 @@ a.acquistaR:hover {
 
 /** STILI PROSSIMO E PRECEDENTE **/
 .dx {
-    font-size: 16px;
     text-align: right;
     color: #0b3d86;
 }
 .sx {
-    font-size: 16px;
     text-align: left;
     color: #0b3d86;
 }
 .dx > a, .sx > a {
-    font-size: 20px;
+    font-size: 14px;
     color: #0b3d86;
 }
 .cgt {
     padding-top: 20px;
 }
+
+
 /*formato dei titoli*/
 h2 {
     color: #0b3d86;
@@ -148,16 +156,15 @@ h3 {
         font-size: 16px;
     }
 }
-#prezzaccio {
+.red {
     color: #EA1F05;
 }
 hr {
     width: 80%;
     border-top: 1px dotted #0b3d86;
 }
-
 .caratt-basic {
-    padding-left: 20%;
+    padding-left: 10%;
 }
 .centered {
     text-align: center;
@@ -240,4 +247,18 @@ hr {
 }
 .tg .tg-1col {
     font-weight: 800;
+}
+
+
+
+
+/** MODIFICHE DI STILE PER FAR SI CHE L'IMMAGINE DELLA PROMO SIA SOVRAPPONIBILE ALL'ANTEPRIMA DEL PRODOTTO **/
+.thumbnail.over {
+    position: relative;
+}
+.over-img {
+    width: 100px;
+    position: absolute;
+    top:0%;
+    left: 0%;
 }

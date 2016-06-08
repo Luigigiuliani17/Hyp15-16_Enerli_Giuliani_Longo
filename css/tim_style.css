@@ -30,6 +30,7 @@
 
 /* modifiche di colore e sfondo al footer */
 .panel-footer {
+    align-content: center;
     padding: 10px 0px;
     background-color: #004990;
     border-top: 0px solid #004990;
@@ -61,7 +62,7 @@ body {
 /* riquadro bianco contenente i vari sotto-riquadri nelle pagine */
 .container.marketing {
     align-self: center;
-    max-width: 100%;
+    max-width: 90%;
     background-color: white;
     padding: 40px;
     margin-top: 40px;
