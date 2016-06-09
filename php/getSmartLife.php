@@ -1,6 +1,6 @@
 <?php
 // ritrova le categorie dal database e risponde con un JSON object
-$ass_id=$_POST["ass_id"];
+$prod_id=$_POST["prod_id"];
 
 // prova a stabilire una connessione con il database
 $mysqli = new mysqli("localhost", "root", "", "my_tiim");
@@ -10,13 +10,12 @@ if (mysqli_connect_errno()) { //verify connection
     exit(); //do nothing else
 }
 
-// Voglio estrarre da database tutti i dati del prodotto,
-// più i servizi per il prodotto
-// più gli id del prodotto precedente e del prossimo
+// Voglio estrarre da database tutti i dati del singolo smart life,
+// più i prodotti che possono essere abbinati a questo servizio
+// più gli id del servizio precedente e del prossimo
 else {
     # extract results mysqli_result::fetch_array
-    $query = "SELECT ass_id, Assistenza.nome AS nome_ass, Assistenza.descrizione, faq, promo, cat_id, Categorie.nome AS nome_cat
-    FROM Assistenza join Categorie on id_categoria_ass = cat_id WHERE ass_id = $ass_id";
+    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, prezzo, img1, img2, img3, Smart_Life.descrizione_completa, categoria, regole_attivazione, caratteristiche, Categorie.nome AS nome_cat FROM Smart_Life join Categorie on categoria = cat_id WHERE smart_life_id = $smart_life_id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

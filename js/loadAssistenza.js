@@ -51,24 +51,17 @@ function getFromDB(id){
             var res = JSON.parse(response);
             var assistenza = res[0];
 
-            $("#nome_ass").html(assistenza.nome_ass);
-            //$("#descrizione").html(assistenza.descrizione);
-           // $("#faq").html(assistenza.faq);
-            /*
+
             // path
             var path =  '<a  href="dinamicAssistenzaTutti.html">> Assistenza</a>';
             path +=     '<a  href="categorie.html?type=3"> > Categorie</a>';
             path +=     '<a  href="assistenzaPerCategoria.html?cat_id='+ assistenza.cat_id +'"> > ' + assistenza.nome_cat + '</a>';
-            path +=     ' > '+ assistenza.nome_prod;
+            path +=     ' > '+ assistenza.nome_ass;
 
 
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
             $("#path").html(path);
-            $("#nome-prod").html(prodotto.nome_prod);
-            $("#descrizione").html(prodotto.descrizione);
-            $("#prezzaccio").html(prezzo);
-            */
-
+            $("#nome_ass").html(assistenza.nome_ass);
 
 
             // gestione della descrizione
