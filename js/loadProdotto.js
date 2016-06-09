@@ -104,7 +104,7 @@ function getFromDB(id){
             // parso la stringa per ottenere  singole specifiche
             var spec_tec = parsespec(prodotto.specifiche);
             for (var j=0; j < spec_tec.length; j++) {
-                var single_spec = spec_tec[j].split(',');
+                var single_spec = spec_tec[j].split('*');
                 spec_tec_str += '<tr>';
                 if (j%2 == 0) {
                     spec_tec_str += '<td class="col-sm-4 tg-1col tg-6k2t">' + single_spec[0] + '</td>';

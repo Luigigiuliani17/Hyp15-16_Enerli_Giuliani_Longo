@@ -1,0 +1,176 @@
+$(document).ready(ready);
+function ready(){
+
+    /* Voglio caricare da database tutti gli oggetti in promozione di un certo tipo */
+
+    /* ritrovo nell'url il valore del parametro */
+    var type_promo = getLocationValue("type");
+    // a seconda del tipo, chiamo una funzione che carica i prodotti o i servizi o le assistenze
+
+    switch (parseInt(type_promo)) {
+        case 1:
+            getProdPromo(type_promo);
+            break;
+        case 2:
+            getSLPromo(type_promo);
+            break;
+        case 3:
+            getAssPromo(type_promo);
+            break;
+        default:
+            console.log("not able to retrieve this");
+    }
+}
+
+/* funzione per caricare i prodotti in promozione da database */
+function getProdPromo(tipo){
+    $.ajax({
+        method: "POST",
+        crossDomain: true,
+        data: {type:tipo},
+        url: "http://tiim.altervista.org/php/getPromo.php",
+        success: function(response) {
+
+            var prodotti = JSON.parse(response);
+            // carico il css adatto
+            $("#css-link").attr('href', "/css/prodotti.css")
+            //carico il titolo della pagina e il banner
+            $("#title").html("TIIM - Prodotti in promozione")
+            $("#banner").attr('src', "/images/offerte/banner_prod_promo.png")
+
+            // creo la variabile result per contenere il contenuto dinamico della pagina.
+            var res = "";
+
+            // raccolta dei prodotti
+            for (var i = 0; i < prodotti.length; i++) {
+                // costruisco iun thumbnail per ogni prodotto
+                res += '<div class="col-xs-12 col-sm-6 col-md-3">';
+                res += 	'<div class="thumbnail over">';
+                res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                if (prodotti[i].promo == 1) {
+                    res += '<span class="over-img">';
+                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res += '</span>';
+                }
+                res +=       '<div class="caption">';
+                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '"><h4>' + prodotti[i].nome +'</h4></a>';
+                res += 		       '<h5>' + prodotti[i].prezzo + ' &euro;</h5>'
+                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '" class="button buttonDB">Dettagli</a>';
+                res += 	     '</div>';
+                res +=  '</div>';
+                res += '</div>';
+            }
+            $("#content").html(res);
+
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+}
+
+
+// FUNZIONE CHE CARICA DA DB I SERVIZI SMARTLIFE IN PROMOZIONE
+function getSLPromo(tipo) {
+    $.ajax({
+        method: "POST",
+        crossDomain: true,
+        data: {type:tipo},
+        url: "http://tiim.altervista.org/php/getPromo.php",
+        success: function(response) {
+
+            var prodotti = JSON.parse(response);
+            // carico il css adatto
+            $("#css-link").attr('href', "/css/smart_life.css")
+            //carico il titolo della pagina e il banner
+            $("#title").html("TIIM - Smart Life in promozione")
+            $("#banner").attr('src', "/images/offerte/banner_sl_promo.png")
+
+            // creo la variabile result per contenere il contenuto dinamico della pagina.
+            var res = "lolololol";
+
+            // SVILUPPO DEL CONTENUTO DINAMICO
+            //-------------------
+            //-------------------
+            //-------------------
+            //-------------------
+            //-------------------
+
+            $("#content").html(res);
+
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+}
+
+
+// FUNZIONE CHE CARICA DA SB I SERVIZI DI ASSISTENZA IN EVIDENZA
+function getAssPromo(tipo) {
+    $.ajax({
+        method: "POST",
+        crossDomain: true,
+        data: {type:tipo},
+        url: "http://tiim.altervista.org/php/getPromo.php",
+        success: function(response) {
+
+            var prodotti = JSON.parse(response);
+            // carico il css adatto
+            $("#css-link").attr('href', "/css/assistenza.css")
+            //carico il titolo della pagina e il banner
+            $("#title").html("TIIM - Assistenza in evidenza")
+            $("#banner").attr('src', "/images/offerte/banner_ass_evi.png")
+
+            // creo la variabile result per contenere il contenuto dinamico della pagina.
+            var res = "lolololo";
+
+            // SVILUPPO DEL CONTENUTO DINAMICO
+            //-------------------
+            //-------------------
+            //-------------------
+            //-------------------
+            //-------------------
+
+            $("#content").html(res);
+
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+}
+
+
+
+
+
+/* funzione che analizza l'url alla ricerca del nome del parametro e restitiuisce il valore di quel parametro */
+function getLocationValue(string){
+    // variabile stringa per contenere l'url della pagina.
+    var loc = document.location.toString()+"";
+    // variabile posizione per capire in che posizione si trova il '?'
+    var pos;
+    if (loc.indexOf("?") == -1) {
+        return "";
+    }else{
+        pos = loc.indexOf("&"+string+"=");
+        if(pos == -1){
+            pos = loc.indexOf("?"+string+"=")
+        }
+        if(pos == -1){
+            return "";
+        }
+        pos+=2+(string.length);
+        // variabile store per contenere il valore del parametro
+        var store = "";
+        // finche non finisce l'url o non si trova un altro parametro, salva i caratteri in store
+        for(; pos < loc.length && loc.charAt(pos) != '&' && loc.charAt(pos)!= undefined ; pos++){
+            store = store.concat(loc.charAt(pos));
+        }
+        return unescape(store);
+    }
+}

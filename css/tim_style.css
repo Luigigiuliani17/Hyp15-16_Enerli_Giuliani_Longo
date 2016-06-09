@@ -62,10 +62,10 @@ body {
 /* riquadro bianco contenente i vari sotto-riquadri nelle pagine */
 .container.marketing {
     align-self: center;
-    max-width: 90%;
+    max-width: 100%;
     background-color: white;
     padding: 40px;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-bottom: 40px;
     border-radius: 8px;
 }
@@ -76,6 +76,7 @@ body {
         padding: 20px;
         padding-top: 10px;
         margin-bottom: 30px;
+        margin-top: 0px;
     }
 }
 
@@ -111,7 +112,7 @@ nav.second-navbar.navbar-inverse {
 }
 @media (max-width:767px){
     nav.second-navbar.navbar-inverse {
-        top: 48px;
+        top: 47px;
     }
 }
 nav.second-navbar.navbar-inverse ul {
@@ -126,9 +127,9 @@ nav.second-navbar.navbar-inverse {
 }
 
 @media only screen and (max-width: 766px) {
-.second-navbar > .collapsing, .second-navbar > .in {background-color: #eee;}
-.second-navbar > .collapsing ul li a, .second-navbar > .in ul li a {color: #0b3d86!important;}
-.second-navbar > .collapsing ul li a:hover, .second-navbar > .in ul li a:hover {color: #135EBD!important;}
+    .second-navbar > .collapsing, .second-navbar > .in {background-color: #eee;}
+    .second-navbar > .collapsing ul li a, .second-navbar > .in ul li a {color: #0b3d86!important;}
+    .second-navbar > .collapsing ul li a:hover, .second-navbar > .in ul li a:hover {color: #135EBD!important;}
 }
 
 nav.second-navbar.navbar-inverse ul li {
@@ -156,4 +157,57 @@ nav.second-navbar.navbar-inverse >  .navbar-nav .nav  .navbar-left {
 nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
     color: #0b3d86;
     font-weight: 600;
+}
+@media(max-width: 767px) {
+    nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+        color: #0b3d86;
+        font-size: 14px;
+    }
+}
+
+
+/* modifiche alla dimensione del banner nella pagine promozione */
+.banner > img {
+    width: 100%;
+}
+
+/* modifiche al container bianco nella pagina promozioni */
+.row.marketing {
+    align-self: center;
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* riduco il padding su schermi piccoli */
+@media (max-width:767px){
+    .row.marketing {
+        padding: 20px;
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* modifiche allo stile del percorso dalla home alla pagina attuale */
+.path {
+    align-self: center;
+    max-width: 90%;
+    padding-bottom: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+/* modifiche allo stile del percorso dalla home alla pagina del singolo prodotto */
+.pathSingle {
+    padding-top: 45px;
+}
+@media (max-width:767px){
+	.path {
+    	padding-bottom: 20px;
+    }
 }

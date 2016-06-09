@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>TIM - Categorie</title>
+        <title id="title"></title>
 
         <!-- Bootstrap -->
         <link href="/bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
         <link href="/css/tim_style.css" rel="stylesheet">
-        <link href="/css/categorie.css" rel="stylesheet">
+        <link id="css-link" href="" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,20 +23,18 @@
         <!-- Includo navbar da altro file -->
         <header id="includedNavbar"></header>
 
-        <!-- Path generato dinamicamente a seconda che ci si trovi nella pagina delle ctegorie [prodotti, servizi o assistenza] -->
+        <!-- Path statico -->
         <div id="path" class="path">
         </div>
 
         <div class="container">
-            <!-- CONTENUTO DELLA PAGINA GENERATO DINAMICAMENTE ALL'INTERNO DEI COMPONENTI "description" e "categories" -->
-            <div class="container marketing">
-                <!-- Riquadro con la descrizione introduttiva delle categorie-->
-                <h4>Ti offriamo diverse categorie per aiutarti a trovare quello che stai cercando.</h4>
-                <div id="description" class="row"></div>
-
-                <!-- Riquadro con le categorie vere e proprie -->
-                <div id="categories" class="row"></div>
+            <div class="row banner">
+                <img id="banner"  src="" class="img-responsive">
             </div>
+
+            <!-- CONTENUTO DELLA PAGINA GENERATO DINAMICAMENTE -->
+            <!-- Un riquadro con i prodotti in promozione -->
+            <div id="content" class="row marketing"></div>
         </div>
 
         <!-- Includo footer da altro file -->
@@ -54,6 +52,6 @@
             });
         </script>
         <!-- Script per caricare dinamicamente il contenuto della pagina -->
-        <script src="/js/loadCategorie.js"></script>
+        <script src="/js/loadPromo.js"></script>
     </body>
 </html>

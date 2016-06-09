@@ -22,23 +22,7 @@
 
 }
 
-/* modifiche allo stile del percorso dalla home alla pagina attuale */
-.path {
-    align-self: center;
-    max-width: 90%;
-    padding-bottom: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-/* modifiche allo stile del percorso dalla home alla pagina del singolo prodotto */
-.pathSingle {
-    padding-top: 50px;
-}
-@media (max-width:767px){
-	.path {
-    	padding-bottom: 0px;
-    }
-}
+
 /* modifiche allo stile del titolo di ogni categoria*/
 .prod-title a {
     color: #0b3d86;
