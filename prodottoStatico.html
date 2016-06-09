@@ -184,6 +184,134 @@
         <section id="acq">
             <div class="container marketing">
                 <h2>Acquista</h2>
+                Drag & Drop components
+                Input
+                Radios / Checkboxes
+                Select
+                Buttons
+                View HTML
+                About
+
+                Rendered source of your form:
+
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Acquista</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="nome">Nome</label>
+                            <div class="col-md-4">
+                                <input id="nome" name="nome" type="text" placeholder="fonzie" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="cognome">Cognome</label>
+                            <div class="col-md-4">
+                                <input id="cognome" name="cognome" type="text" placeholder="fonzie" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="email">Indirizzo email</label>
+                            <div class="col-md-4">
+                                <input id="email" name="email" type="text" placeholder="fonzie@mail.com" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="date">Data di nascita</label>
+                            <div class="col-md-4">
+                                <select id="date" name="date" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="city">Città</label>
+                            <div class="col-md-4">
+                                <input id="city" name="city" type="text" placeholder="FonzieCity" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="cap">CAP</label>
+                            <div class="col-md-2">
+                                <input id="cap" name="cap" type="text" placeholder="20069" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="via">Indirizzo</label>
+                            <div class="col-md-4">
+                                <input id="via" name="via" type="text" placeholder="via fonzie 69" class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Multiple Radios -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="pagamenti">Metodo di Pagamento</label>
+                            <div class="col-md-4">
+                                <div class="radio">
+                                    <label for="pagamenti-0">
+                                        <input type="radio" name="pagamenti" id="pagamenti-0" value="1" checked="checked">
+                                        mastercard
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="pagamenti-1">
+                                        <input type="radio" name="pagamenti" id="pagamenti-1" value="2">
+                                        fonziecard
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label for="pagamenti-2">
+                                        <input type="radio" name="pagamenti" id="pagamenti-2" value="3">
+                                        contrassego
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Prepended text-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="check">Acconsenti al trattamento dei dati personali?</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon">No   </span>
+                                    <input id="check" name="check" class="form-control" placeholder="Si" type="text" required="">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="acqui"></label>
+                            <div class="col-md-4">
+                                <button id="acqui" name="acqui" class="btn btn-primary">Acquista</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
             </div>
         </section>
 

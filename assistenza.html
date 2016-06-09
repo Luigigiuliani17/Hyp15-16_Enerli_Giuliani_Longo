@@ -34,57 +34,59 @@
             </div>
             <div class="sec-nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="navbar-right nav navbar-nav">
-                    <li><a href="#descrizione">Descrizione</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#prod">Prodotti</a></li>
-                    <li><a href="#contattaci">Contattaci</a></li>
+                    <li><a href="#desc-nav">Descrizione</a></li>
+                    <li><a href="#faq-nav">FAQ</a></li>
+                    <li><a href="#prod-nav">Prodotti</a></li>
+                    <li><a href="#cont-nav">Contattaci</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div id="path" class="path">
+        <div id="path" class="path pathSingle">
             <!-- contenuto dinamico -->
         </div>
-        <!-- Riquadro con la presentazione del prodotto -->
-        <div class="container marketing">
-            <div class="row">
-                <!-- nome assistenza -->
-                <h2 id="nome_ass"><!--contenuto dinamico --></h2>
 
-                <h3 class="title">Descrizione</h3>
-                <ul id="descrizione"><!--contenuto dinamico --></ul>
-            </div><!-- /end row -->
-            <div class="row cgt">
-                <div class="col-xs-2 dx" id="prev"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
-                <div class="col-xs-4 sx">precedente</div>
-                <div class="col-xs-4 dx">prossimo</div>
-                <div class="col-xs-2 sx" id="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+        <div class="container">
+            <!-- Riquadro con la presentazione del prodotto -->
+            <section id="desc-nav">
+                <div class="container marketing">
+                    <div class="row">
+                        <!-- nome assistenza -->
+                        <h2 id="nome_ass"><!--contenuto dinamico --></h2>
 
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-        </div><!-- / fine presentazione -->
-
+                        <h3 class="title">Descrizione</h3>
+                        <ul id="descrizione"><!--contenuto dinamico --></ul>
+                    </div><!-- /end row -->
+                    <div class="row cgt">
+                        <div class="col-xs-6 sx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span> precedente</a></div>
+                        <div class="col-xs-6 dx"><a  id="next-prod" href="">prossimo <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                </div><!-- / fine presentazione -->
+            </section>
 
             <!-- Riquadro con le FAQ -->
-            <div class="container marketing">
-                <h3 class= "title">FAQ</h3>
-                <ul id="faq"><!--contenuto dinamico --></ul>
-            </div>
+            <section id="faq-nav">
+                <div class="container marketing">
+                    <h3 class= "title">FAQ</h3>
+                    <ul id="faq"><!--contenuto dinamico --></ul>
+                </div>
+            </section>
 
+            <section id="prod-nav">
+                <!-- Riquadro con i prodotti compatibili con questa assistenza -->
+                <div class="container marketing">
+                    <h3 class="title" align="center">Assistenza valida per i seguenti prodotti</h2>
+                </div>
+            </section>
 
-        <section id="prod">
-            <!-- Riquadro con i prodotti compatibili con questa assistenza -->
-            <div class="container marketing">
-                <h3 class="title" align="center">Assistenza valida per i seguenti prodotti</h2>
-            </div>
-        </section>
-
-
-        <!-- Riquadro con il form per contattarci -->
-        <div class="container marketing">
-            <h3 class = "contattaci">Contattaci</h3>
+            <section id="cont-nav">
+                <!-- Riquadro con il form per contattarci -->
+                <div class="container marketing">
+                    <h3 class = "contattaci">Contattaci</h3>
+                </div>
+            </section>
         </div>
-
 
         <!-- Includo footer da altro file -->
         <footer id="includedFooter" class="panel-footer"></footer>
@@ -95,6 +97,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="/js/loadAssistenza.js"></script>
+        <script src="/js/second-nav-scrolling.js"></script>
         <script>
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
