@@ -37,7 +37,7 @@ function getFromDB(){
                     res += '<div class="container marketing">';
                     res +=  '<div class="row ass-title">';
                     res +=      '<img src="/images/categorie/' + assByCat[0].icon_cat + '"/>';
-                    res +=      ' ' + '<a href="prodottiPerCategoria.html?cat_id=' +assByCat[0].cat_id+ '">' + assByCat[0].nome_cat + ' (' + assByCat.length +')</a>';
+                    res +=      ' ' + '<a href="assistenzaPerCategoria.html?cat_id=' +assByCat[0].cat_id+ '">' + assByCat[0].nome_cat + ' (' + assByCat.length +')</a>';
                     res +=  '</div>';
                     // inizia la riga delle assistenze:
                     res +=  '<div class="row">';
