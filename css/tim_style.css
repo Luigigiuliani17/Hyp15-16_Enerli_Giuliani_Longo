@@ -211,3 +211,18 @@ nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
     	padding-bottom: 20px;
     }
 }
+
+
+/* Dimensione immagini pagamento nel form*/
+.group-form > img {
+    width: 145px;
+}
+.control-label.sx {
+    padding: 2px;
+    padding-left: 35px;
+    text-align: left;
+    color: #777;
+}
+fieldset {
+    padding-top: 10px;
+}

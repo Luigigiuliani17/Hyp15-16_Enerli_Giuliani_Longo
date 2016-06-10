@@ -105,3 +105,17 @@ h3 {
         font-size: 16px;
     }
 }
+
+textarea{
+ /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 5em;
+
+    /* To allow users to resize any textarea vertically
+       It does not work on all browsers */
+    resize: vertical;
+
+    padding-right: 40px;
+}
