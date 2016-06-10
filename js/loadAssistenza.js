@@ -44,23 +44,25 @@ function getFromDB(id){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "http://tiim.altervista.org/php/getAssistenzaSingola.php", //Relative or absolute path to file.php file
+        url: "http://tiim.altervista.org/php/getAssistenza.php", //Relative or absolute path to file.php file
         data: {ass_id:id},
         success: function(response) {
             // in prodotto dovrebbe esserci un elemento richiesto
             var res = JSON.parse(response);
             var assistenza = res[0];
+            console.log(res[0]);
 
 
             // path
-            var path =  '<a  href="dinamicAssistenzaTutti.html">> Assistenza</a>';
+            var path =  '<a  href="assistenzaTutti.html">> Assistenza</a>';
             path +=     '<a  href="categorie.html?type=3"> > Categorie</a>';
             path +=     '<a  href="assistenzaPerCategoria.html?cat_id='+ assistenza.cat_id +'"> > ' + assistenza.nome_cat + '</a>';
             path +=     ' > '+ assistenza.nome_ass;
 
 
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
-            $("#path").html(path);
+           $('#title').html('TIIM - '+assistenza.nome_ass);
+           $("#path").html(path);
             $("#nome_ass").html(assistenza.nome_ass);
 
 
@@ -84,31 +86,11 @@ function getFromDB(id){
             }
 
              $("#faq").html(faq_str);
-		/*
-            // gestione delle specifiche tecniche
-            var spec_tec_str = '<table class="tg">';
-            // parso la stringa per ottenere  singole specifiche
-            var spec_tec = parsespec(prodotto.specifiche);
-            for (var j=0; j < spec_tec.length; j++) {
-                var single_spec = spec_tec[j].split(',');
-                spec_tec_str += '<tr>';
-                if (j%2 == 0) {
-                    spec_tec_str += '<td class="col-sm-4 tg-1col tg-6k2t">' + single_spec[0] + '</td>';
-                    spec_tec_str += '<td class="col-sm-8 tg-6k2t">' + single_spec[1] + '</td>';
-                } else {
-                    spec_tec_str += '<td class="col-sm-4 tg-1col tg-yw4l">' + single_spec[0] + '</td>';
-                    spec_tec_str += '<td class="col-sm-8 tg-yw4l">' + single_spec[1] + '</td>';
-                }
-                spec_tec_str += '</tr>';
-            }
-            spec_tec_str += '</table>';
-            $("#caratteristiche-base").html(caratt_str);
-            $("#spec-tech").html(spec_tec_str);
+
 
             //installa il guided tour circolare sui prodotti della stessa categoria
             console.log("inizio a creare il cgt");
-            getProdCGT(id, prodotto.cat_id);
-            */
+            getAssCGT(id, assistenza.cat_id);
         },
 
 
@@ -122,14 +104,43 @@ function getFromDB(id){
 
 function parsec (stringa) {
     var res = stringa.split('+');
-    console.log(res);
-    return res;
-}
-/*
-function parsespec (stringa) {
-    var res = stringa.split('+');
-    console.log(res);
     return res;
 }
 
-*/
+// funzione per installare il circular guided tour tra le assistenze della stessa categoria
+function getAssCGT(ass_id, cat_id) {
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://tiim.altervista.org/php/getAssistenzaID.php", //Relative or absolute path to file.php file
+        data: {categoria:cat_id},
+        // prende tutti gli id e seleziona quelli opportuni da metter in next e previous
+        success: function(response) {
+            var next, previous;
+            var ids=JSON.parse(response);
+            // ricerca degli id voluti
+            for(var i=0; i < ids.length; i++) {
+                if(ids[i].ass_id == ass_id) {
+                    if(i == 0) {
+                        previous = ids[ids.length-1].ass_id;
+                    } else {
+                        previous = ids[i-1].ass_id;
+                    }
+                    if(i == ids.length-1) {
+                        next = ids[0].ass_id;
+                    } else {
+                        next = ids[i+1].ass_id;
+                    }
+                }
+            }
+            $("#prev-prod").attr('href', 'assistenza.html?id='+previous);
+            $("#next-prod").attr('href', 'assistenza.html?id='+next);
+        },
+        error: function(request,error) {
+            console.log("Error");
+        }
+    });
+}
+
+
