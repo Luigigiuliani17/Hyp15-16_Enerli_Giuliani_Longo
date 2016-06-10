@@ -103,3 +103,8 @@ a.button:hover {
     color: #fff;
     font-size: 1.5em;
 }
+
+
+.carousel-indicators {
+  bottom: 0px;
+}

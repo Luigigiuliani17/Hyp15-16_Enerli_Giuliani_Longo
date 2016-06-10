@@ -11,6 +11,7 @@
         <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
         <link href="css/tim_style.css" rel="stylesheet">
         <link href="css/prodotti.css" rel="stylesheet">
+        <link href="css/magic-check.min.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -113,6 +114,7 @@
                 <!-- Riquadro con i servizi compatibili con il prodotto -->
                 <div class="container marketing">
                     <h2>Smart Life per questo prodotto</h2>
+                    <div id="sl-list" class="sl-list row"><!-- CONTENUTO DINAMICO --></div>
                 </div>
             </section>
 
@@ -120,6 +122,7 @@
                 <!-- Riquadro con l'assistenza compatibile col prodotto -->
                 <div class="container marketing">
                     <h2>Assistenza per questo prodotto</h2>
+                    <ul id="ass-list" class="ass-list"><!-- CONTENUTO DINAMICO --></ul>
                 </div>
             </section>
 
@@ -128,6 +131,7 @@
                 <!-- Riquadro con il form per acquistare il prodotto -->
                 <div id="acquista" class="container marketing">
                     <h2>Acquista</h2>
+                    <form id="includedForm" class="form-horizontal"></form>
                 </div>
             </section>
         </div>
@@ -148,6 +152,7 @@
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
                 $("#includedFooter").load("/html-componenti/footer.html");
+                $("#includedForm").load("/html-componenti/form-acquista.html");
             });
         </script>
     </body>

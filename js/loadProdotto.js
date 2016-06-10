@@ -8,6 +8,11 @@ function ready(){
     // ora carica da database il prodotto con quell'id
     getFromDB(id);
 
+    // carica dal database i servizi SL compatibili con il prodotto:
+    getSLProd(id);
+    // carica da DB i servizi di assistenza compatibili col prodotto
+    getAssProd(id);
+
 }
 
 
@@ -173,6 +178,70 @@ function getProdCGT(prod_id, cat_id) {
             $("#next-prod").attr('href', 'prodotto.html?id='+next);
         },
         error: function(request,error) {
+            console.log("Error");
+        }
+    });
+}
+
+
+
+
+
+/* funzione per caricare ii servizi compatibili da database */
+function getSLProd(id){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://tiim.altervista.org/php/getSLProdotto.php", //Relative or absolute path to file.php file
+        data: {prod_id:id},
+        success: function(response) {
+            // in prodotto dovrebbe esserci un elemento richiesto
+            var servizi = JSON.parse(response);
+            var res = "";
+
+            for (var i = 0; i<servizi.length; i++) {
+                res += '<div class="col-xs-6 col-sm-3 col-md-2">';
+                res +=      '<div class="thumbnail">';
+                res +=          '<a href="smartLife.html?id=' + servizi[i].smart_life_id + '">';
+                res +=              '<img src="/images/smart_life/logo/' + servizi[i].icon + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=          '</a>'
+                res +=      '</div>';
+                res += '</div>';
+            }
+
+            $("#sl-list").html(res);
+        },
+        error: function(request,error)
+        {
+            console.log("Error");
+        }
+    });
+}
+
+/* funzione per caricare le assistenze compatibili da database */
+function getAssProd(id){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://tiim.altervista.org/php/getAssistenzeProdotto.php", //Relative or absolute path to file.php file
+        data: {prod_id:id},
+        success: function(response) {
+            // in prodotto dovrebbe esserci un elemento richiesto
+            var assistenze = JSON.parse(response);
+            var res = "";
+
+            for (var i = 0; i<assistenze.length; i++) {
+                res += '<li>';
+                res +=      '<a href="assistenza.html?id=' + assistenze[i].ass_id + '">' + assistenze[i].nome +'</a>';
+                res += '</li>';
+            }
+
+            $("#ass-list").html(res);
+        },
+        error: function(request,error)
+        {
             console.log("Error");
         }
     });
