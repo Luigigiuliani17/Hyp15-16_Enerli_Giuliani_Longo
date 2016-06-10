@@ -20,10 +20,8 @@ function getFromDB(){
             var assistenze = JSON.parse(response);
             console.log(assistenze);
             for (var cat = 10; cat <= 13; cat ++) {
-                console.log(cat);
                 // per ogni categoria creo un nuovo vettore di prodotti
                 var assByCat = [];
-                console.log(assByCat);
 
                 for (var ass = 0; ass < assistenze.length; ass++) {
                     if (assistenze[ass].cat_id == (cat)) {
@@ -35,10 +33,9 @@ function getFromDB(){
 
                 // se c'è almeno un prodotto per quella categoria:
                 if (assByCat.length > 0) {
-                console.log(assByCat[0].cat_id);
                     // creo l'introduzione
                     res += '<div class="container marketing">';
-                    res +=  '<div class="row prod-title">';
+                    res +=  '<div class="row ass-title">';
                     res +=      '<img src="/images/categorie/' + assByCat[0].icon_cat + '"/>';
                     res +=      ' ' + '<a href="prodottiPerCategoria.html?cat_id=' +assByCat[0].cat_id+ '">' + assByCat[0].nome_cat + ' (' + assByCat.length +')</a>';
                     res +=  '</div>';
@@ -50,15 +47,17 @@ function getFromDB(){
 
                     if(assByCat[i].promo === "0"){
                         // costruisco la lista
+                        console.log(assByCat[i].ass_id);
                         res += '<ul id="lista" type=”disc”>';
-                        res += 	'<li><a href="assistenza.html?id=">' + assByCat[i].nome_ass + '</a></li>';
+                        res += 	'<li><a href="assistenza.html?id=' + assByCat[i].ass_id + '">' + assByCat[i].nome_ass + '</a></li>';
                         res += '</ul>';
                     }
 
                      if(assByCat[i].promo == "1"){
                         // costruisco la lista
+                        console.log(assByCat[i].ass_id);
                         res += '<ul id="lista_promo" type=”disc”>';
-                        res += 	'<li><a href="assistenza.html?id=">' + assByCat[i].nome_ass + '</a></li>';
+                        res += 	'<li><a href="assistenza.html?id=' + assByCat[i].ass_id + '">' + assByCat[i].nome_ass + '</a></li>';
                         res += '</ul>';
                     }
                     }

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>TIM - Assistenza XZY</title>
+        <title id="title"></title>
 
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
@@ -54,8 +54,8 @@
                         <!-- nome assistenza -->
                         <h2 id="nome_ass"><!--contenuto dinamico --></h2>
 
-                        <h3 class="title">Descrizione</h3>
-                        <ul id="descrizione"><!--contenuto dinamico --></ul>
+                        <h2>Descrizione</h2>
+                        <div id="descrizione"><!--contenuto dinamico --></div>
                     </div><!-- /end row -->
                     <div class="row cgt">
                         <div class="col-xs-6 sx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span> precedente</a></div>
@@ -68,22 +68,23 @@
             <!-- Riquadro con le FAQ -->
             <section id="faq-nav">
                 <div class="container marketing">
-                    <h3 class= "title">FAQ</h3>
-                    <ul id="faq"><!--contenuto dinamico --></ul>
+                    <h2>FAQ</h2>
+                    <div id="faq"><!--contenuto dinamico --></div>
                 </div>
             </section>
 
             <section id="prod-nav">
                 <!-- Riquadro con i prodotti compatibili con questa assistenza -->
                 <div class="container marketing">
-                    <h3 class="title" align="center">Assistenza valida per i seguenti prodotti</h2>
+                    <h2>Assistenza valida per i seguenti prodotti</h2>
                 </div>
             </section>
 
             <section id="cont-nav">
                 <!-- Riquadro con il form per contattarci -->
                 <div class="container marketing">
-                    <h3 class = "contattaci">Contattaci</h3>
+                    <h2>Contattaci</h2>
+                    <form id="includedForm" class="form-horizontal"></form>
                 </div>
             </section>
         </div>
@@ -102,6 +103,7 @@
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
                 $("#includedFooter").load("/html-componenti/footer.html");
+                $("#includedForm").load("/html-componenti/form-acquista.html");
             });
         </script>
     </body>
