@@ -136,7 +136,7 @@ nav.second-navbar.navbar-inverse ul li {
     margin: 0 10px;
 }
 nav.second-navbar.navbar-inverse ul li a {
-    padding: 2px 0;
+    padding: 3px 0;
     color: #0b3d86;
     font-size: 1em;
     text-decoration: none;
@@ -149,7 +149,7 @@ nav.second-navbar.navbar-inverse ul li a:hover {
 }
 a.active {
     color: #135EBD;
-    border-bottom: 10px solid #135EBD;
+    border-bottom: 9px solid #135EBD;
 }
 nav.second-navbar.navbar-inverse >  .navbar-nav .nav  .navbar-left {
     font-size: 1.2em;

@@ -1,0 +1,100 @@
+/* SECOND NAVBAR NAVIGATION */
+nav.third-navbar.navbar-inverse {
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    background: #fff;
+}
+@media (max-width:767px){
+    nav.third-navbar.navbar-inverse {
+        top: 47px;
+    }
+}
+nav.third-navbar.navbar-inverse ul {
+    padding: 0px;
+    padding-top: 13px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+}
+nav.third-navbar.navbar-inverse {
+
+}
+
+@media only screen and (max-width: 766px) {
+    .third-navbar > .collapsing, .third-navbar > .in {background-color: #fff;}
+    .third-navbar > .collapsing ul li a, .third-navbar > .in ul li a {color: #0b3d86!important;}
+    .third-navbar > .collapsing ul li a:hover, .third-navbar > .in ul li a:hover {color: #135EBD!important;}
+}
+
+nav.third-navbar.navbar-inverse ul li {
+    margin: 0 10px;
+}
+nav.third-navbar.navbar-inverse ul li a {
+    padding: 3px 0;
+    color: #0b3d86;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+nav.third-navbar.navbar-inverse ul li a:hover {
+    color: #135EBD;
+    background-color: #fff;
+    cursor: pointer;
+}
+a.active {
+    color: #135EBD;
+    border-bottom: 9px solid #135EBD;
+}
+nav.third-navbar.navbar-inverse >  .navbar-nav .nav  .navbar-left {
+    font-size: 1.2em;
+}
+nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+    color: #0b3d86;
+    font-weight: 600;
+}
+@media(max-width: 767px) {
+    nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+        color: #0b3d86;
+        font-size: 14px;
+    }
+}
+.third-navbar.navbar-inverse .icon-bar {
+    background-color: #0b3d86;
+}
+
+.row {
+    display: flex;
+}
+
+.banner {
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.spot, .quote {
+    background-color: #fff;
+}
+.quote {
+    color: #0b3d86;
+    font-size: 24px;
+    padding-top: 10%;
+    text-align: center;
+    height: 100%;
+}
+.spot {
+    padding: 20px;
+}
+.testimonial > img {
+    width: 100%;
+}
+.col-sm-4, .col-sm-8, .col-sm-12 {
+    padding: 5px;
+}
+.container.test {
+    margin-bottom: 40px;
+}
