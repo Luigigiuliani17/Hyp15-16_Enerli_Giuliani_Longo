@@ -42,37 +42,41 @@ function getCatFromDB(cat){
 }
 
 /* funzione per caricare le categorie da database */
-function getProdFromDB(cat){
+function getAssFromDB(cat){
     $.ajax({
         method: "POST",
         crossDomain: true,
         data: {categoria:cat},
-        url: "http://tiim.altervista.org/php/getProdottiByCategoria.php",
+        url: "http://tiim.altervista.org/php/getAssistenzaByCategoria.php",
         success: function(response) {
             // in prodotti dovrebbe esserci un vettore di elementi prodotti di una categoria.
-            var prodotti = JSON.parse(response);
+            var assistenza = JSON.parse(response);
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "";
 
-            // raccolta dei prodotti
-            for (var i = 0; i < prodotti.length; i++) {
-                // costruisco iun thumbnail per ogni prodotto
-                res += '<div class="col-xs-12 col-sm-6 col-md-3">';
-                res += 	'<div class="thumbnail over">';
-                res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
-                if (prodotti[i].promo == 1) {
-                    res += '<span class="over-img">';
-                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
-                    res += '</span>';
-                }
-                res +=       '<div class="caption">';
-                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '"><h4>' + prodotti[i].nome_prod +'</h4></a>';
-                res += 		       '<h5>' + prodotti[i].prezzo + ' &euro;</h5>'
-                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '" class="button buttonDB">Dettagli</a>';
-                res += 	     '</div>';
-                res +=  '</div>';
-                res += '</div>';
-            }
+           res +=  '<div class="row">';
+
+                    // inizio la lista delle assistenze
+                    for (var i = 0; i < assistenza.length; i++) {
+
+                    if(assistenza[i].promo === "0"){
+                        // costruisco la lista
+                        res += '<ul id="lista" type=”disc”>';
+                        res += 	'<li><a href="assistenza.html?id=' + assistenza[i].ass_id + '">' + assistenza[i].nome_ass + '</a></li>';
+                        res += '</ul>';
+                    }
+
+                     if(assistenza[i].promo == "1"){
+                        // costruisco la lista
+                        res += '<ul id="lista_promo" type=”disc”>';
+                        res += 	'<li><a href="assistenza.html?id=' + assistenza[i].ass_id + '">' + assistenza[i].nome_ass + '</a></li>';
+                        res += '</ul>';
+                    }
+                    }
+
+                    // chiudo il container della categoria
+                    res +=  '</div>';
+
             $("#content").html(res);
 
         },
