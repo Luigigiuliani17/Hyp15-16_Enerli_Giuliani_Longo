@@ -119,3 +119,31 @@ textarea{
 
     padding-right: 40px;
 }
+
+/* sovrascrivo il container marketing per inserire l'immagine per la promo */
+.container.marketing {
+    align-self: center;
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* fissa l'immagine al lato destro della descrizione*/
+.over-img {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    left: 90%;
+}
+
+/* scala immagine per schermi piccoli */
+@media(max-width:767px) {
+    .over-img{
+    left: 75%;
+    	width: 25%;}
+}
