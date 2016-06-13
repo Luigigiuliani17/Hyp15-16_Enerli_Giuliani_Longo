@@ -117,7 +117,7 @@ function getAssPromo(tipo) {
         url: "http://tiim.altervista.org/php/getPromo.php",
         success: function(response) {
 
-            var prodotti = JSON.parse(response);
+            var assistenza = JSON.parse(response);
             // carico il css adatto
             $("#css-link").attr('href', "/css/assistenza.css")
             //carico il titolo della pagina e il banner
@@ -125,14 +125,20 @@ function getAssPromo(tipo) {
             $("#banner").attr('src', "/images/offerte/banner_ass_evi.png")
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
-            var res = "lolololo";
+            var res = '<div class="row">';
 
             // SVILUPPO DEL CONTENUTO DINAMICO
-            //-------------------
-            //-------------------
-            //-------------------
-            //-------------------
-            //-------------------
+
+            // inizio la lista delle assistenze
+            for (var i = 0; i < assistenza.length; i++) {
+                // costruisco la lista
+                res += '<ul id="lista_promo" type=”disc”>';
+                res += 	'<li><a href="assistenza.html?id=' + assistenza[i].ass_id + '">' + assistenza[i].nome + '</a></li>';
+                res += '</ul>';
+            }
+
+            // chiudo il container della categoria
+            res +=  '</div>';
 
             $("#content").html(res);
 
