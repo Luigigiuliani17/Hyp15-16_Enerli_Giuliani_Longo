@@ -98,3 +98,39 @@ nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
 .container.test {
     margin-bottom: 40px;
 }
+
+
+/* INNOVAZIONE */
+.tondo{
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.intro{
+    padding-top: 50px;
+    padding-right: 20%;
+}
+.titleRed{
+    color: #cf2a27;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 160%;
+    color: #085394;
+}
+h4{
+    color: black;
+    font-size: 150%;
+}
+
+.descr{
+    color: black;
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid black;
+}
+
