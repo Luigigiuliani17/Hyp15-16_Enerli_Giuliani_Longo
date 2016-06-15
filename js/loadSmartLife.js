@@ -8,6 +8,9 @@ function ready(){
     // ora carica da database lo smat life con quell'id
     getFromDB(id);
 
+    // carica dal database i servizi SL compatibili con il prodotto:
+    getProdSL(id);
+
 }
 
 
@@ -66,6 +69,7 @@ function getFromDB(id){
             $("#nome_smart_life").html(smartLife.nome_smart_life);
             $("#descrizione").html(smartLife.descrizione_completa);
             $("#prezzaccio").html(prezzo);
+            $("#titolo-nav").html(smartLife.nome_smart_life);
 
             // inserisco le immagini nei tab se presenti
             var tab = '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img1 + '" alt="kik" class="img-responsive"/></a></li>'
@@ -102,9 +106,6 @@ function getFromDB(id){
             var caratt = parsec(smartLife.regole_attivazione);
             reg_attiv = caratt[0]
             $("#reg-att").html(reg_attiv);
-
-
-
 
 
             //installa il guided tour circolare sugli smart life della stessa categoria
@@ -165,6 +166,39 @@ function getSmartCGT(smart_life_id, cat_id) {
             $("#next-smart-life").attr('href', 'smartLife.html?id='+next);
         },
         error: function(request,error) {
+            console.log("Error");
+        }
+    });
+}
+
+
+    /* funzione per caricare i prodotti compatibili da database */
+function getProdSL(id){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://tiim.altervista.org/php/getProdSmartLife.php", //Relative or absolute path to file.php file
+        data: {smart_life_id:id},
+        success: function(response) {
+            // in prodotto dovrebbe esserci un elemento richiesto
+            var prodotti = JSON.parse(response);
+            var res = "";
+
+            for (var i = 0; i<prodotti.length; i++) {
+                res += '<div class="col-xs-6 col-sm-3 col-md-2">';
+                res +=      '<div class="thumbnail">';
+                res +=          '<a href="prodotto.html?id=' + prodotti[i].prod_id + '">';
+                res +=              '<img src="/images/prodotti/anteprime/' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=          '</a>'
+                res +=      '</div>';
+                res += '</div>';
+            }
+
+            $("#prod-list").html(res);
+        },
+        error: function(request,error)
+        {
             console.log("Error");
         }
     });
