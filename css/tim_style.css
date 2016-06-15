@@ -255,3 +255,20 @@ a.acquistaR {
     align-content: center;
     padding: 10px;
 }
+
+/** STILI PROSSIMO E PRECEDENTE **/
+.dx {
+    text-align: right;
+    color: #0b3d86;
+}
+.sx {
+    text-align: left;
+    color: #0b3d86;
+}
+.dx > a, .sx > a {
+    font-size: 14px;
+    color: #0b3d86;
+}
+.cgt {
+    padding-top: 20px;
+}
