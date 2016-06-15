@@ -5,7 +5,7 @@ function ready(){
     var id = getLocationValue("id");
     console.log(id);
 
-    // ora carica da database il prodotto con quell'id
+    // ora carica da database lo smat life con quell'id
     getFromDB(id);
 
 }
@@ -38,7 +38,7 @@ function getLocationValue(string){
 }
 
 
-/* funzione per caricare il prodotto da database */
+/* funzione per caricare lo smart life da database */
 function getFromDB(id){
     $.ajax({
         method: "POST",
@@ -46,41 +46,43 @@ function getFromDB(id){
         crossDomain: true, //localhost purposes
         url: "http://tiim.altervista.org/php/getSmartLife.php", //Relative or absolute path to file.php file
         data: {smart_life_id:id},
+
         success: function(response) {
             // in smart life dovrebbe esserci un elemento richiesto
             var res = JSON.parse(response);
+            console.log("res=" + res)
             var smartLife = res[0];
             // path
             var path =  '<a  href="smartLifeTutti.html">> Smart Life</a>';
             path +=     '<a  href="categorie.html?type=1"> > Categorie</a>';
-            path +=     '<a  href="prodottiPerCategoria.html?cat_id='+ smartLife.cat_id +'"> > ' + smartLife.nome_cat + '</a>';
-            path +=     ' > '+ smartLife.nome_prod;
+            path +=     '<a  href="smartLifePerCategoria.html?cat_id='+ smartLife.cat_id +'"> > ' + smartLife.nome_cat + '</a>';
+            path +=     ' > '+ smartLife.nome_smart_life;
 
             var prezzo = "";
             prezzo += smartLife.prezzo.toString();
             prezzo += " &euro;";
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
             $("#path").html(path);
-            $("#nome-smart-life").html(smartLife.nome_prod);
+            $("#nome_smart_life").html(smartLife.nome_smart_life);
             $("#descrizione").html(smartLife.descrizione_completa);
             $("#prezzaccio").html(prezzo);
 
             // inserisco le immagini nei tab se presenti
             var tab = '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img1 + '" alt="kik" class="img-responsive"/></a></li>'
 
-            var image1 = '<img src="images/prodotti/' + smartLife.img1 + '" alt="lol" class="img-responsive"/>';
+            var image1 = '<img src="images/smart_life/' + smartLife.img1 + '" alt="lol" class="img-responsive"/>';
             var image2 = "";
             var image3 = "";
             $('#im1').html(image1);
 
             if (smartLife.img2 != null) {
                 tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img2 + '" alt="" class="img-responsive"/></a></li>';
-                image2 += '<img src="images/prodotti/' + smartLife.img2 + '" alt="" class="img-responsive"/>';
+                image2 += '<img src="images/smart_life/' + smartLife.img2 + '" alt="" class="img-responsive"/>';
                 $('#im2').html(image2);
             }
             if (smartLife.img3 != null) {
                 tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img3 + '" alt="lol" class="img-responsive"/></a></li>';
-                image3 += '<img src="images/prodotti/' + smartLife.img3 + '" alt="lol" class="img-responsive"/>';
+                image3 += '<img src="images/smart_life/' + smartLife.img3 + '" alt="lol" class="img-responsive"/>';
                 $('#im3').html(image3);
             }
             $('#tabz').html(tab);
@@ -92,6 +94,16 @@ function getFromDB(id){
             for (var i = 0; i < caratt.length; i++) {
                 caratt_str += '<li>' + caratt[i] +'</li>';
             }
+            $("#caratteristiche_base").html(caratt_str);
+
+            // gestione delle regole e  attivazione nella presentazione
+            var reg_attiv = "";
+            //parso le caratteristiche per creare diversi elementi di una lista
+            var caratt = parsec(smartLife.regole_attivazione);
+            reg_attiv = caratt[0]
+            $("#reg-att").html(reg_attiv);
+
+
 
 
 
@@ -122,13 +134,13 @@ function parsespec (stringa) {
 
 
 // funzione per installare il circular guided tour tra gli smart life della stessa categoria
-function getSmartCGT(prod_id, cat_id) {
+function getSmartCGT(smart_life_id, cat_id) {
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "http://tiim.altervista.org/php/getSmartLifeID.php", //Relative or absolute path to file.php file
-        data: {categoria:categoria},
+        data: {categoria:cat_id},
         // prende tutti gli id e seleziona quelli opportuni da metter in next e previous
         success: function(response) {
             var next, previous;

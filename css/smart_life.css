@@ -68,10 +68,10 @@
 
 /*** STILI BOTTONI ***/
 /* bottone "Scopri" bianco */
-a.button {
+a.buttonTutti {
     font-size: 14px;
     font-weight: 600;
-    color: #0b3d86;
+    color: white;
     display: inline-block;
     float: center;
     text-align: center;
@@ -82,7 +82,7 @@ a.button {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #EA1F05;
     -webkit-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
     -moz-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
     box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
@@ -94,6 +94,16 @@ a.button {
     line-height:28px;
 
 }
+
+a.buttonTutti:hover {
+    background-color: rgba( 193, 193, 193, 0.90 );
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
 
 
 /* posizionamento del riquadro di testo all'interno del singolo smart life  */
@@ -196,7 +206,7 @@ a.acquistaR {
     line-height:28px;
 }
 /* passaggio del cursore sul bottone elimina l'ombra*/
-a.buttonDB:hover, a.buttonSB:hover, a.acquistaR:hover {
+a.acquistaR:hover {
     top: 3px;
     background-color: rgba( 193, 193, 193, 0.90 );
     -webkit-box-shadow: none;
@@ -263,7 +273,7 @@ hr {
 
 
 /*** MODIFICHE PER LA PAGINA DEI SINGOLI SMART LIFE ***/
-/* modifico lo stile dei tab nello slider delle immagini prodotti */
+/* modifico lo stile dei tab nello slider delle immagini smart life */
 .tab-content {
     padding-left: 15%;
     padding-right: 15%;
@@ -337,5 +347,4 @@ hr {
 .tg .tg-1col {
     font-weight: 800;
 }
-
 
