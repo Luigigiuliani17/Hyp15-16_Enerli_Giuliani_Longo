@@ -34,10 +34,6 @@ ul#lista_promo li {
     list-style-image: url('/images/offerte/promoverde.png');
 }
 
-/* mofiche colore link */
-a{
-    color: #0b3d86;;
-}
 
 /* no spazio tra ul list*/
 ul + ul {

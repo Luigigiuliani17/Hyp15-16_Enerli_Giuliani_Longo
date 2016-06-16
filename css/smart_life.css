@@ -183,40 +183,6 @@ a.buttonTutti:hover {
 }
 
 
-/*bottone acquista rosso*/
-a.acquistaR {
-    font-size: 14px;
-    font-weight: 500;
-    color: white;
-    display: inline-block;
-    float: center;
-    text-align: center;
-    text-decoration: none;
-    width: 180px; height: 28px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #EA1F05;
-    -webkit-box-shadow: 0 3px rgba(255,35,50,.75);
-    -moz-box-shadow: 0 3px rgba(255,35,50,.75);
-    box-shadow: 0 3px rgba(255,35,50,.75);
-    transition: all 0.1s linear 0s;
-    top: 0px;
-    position: relative;
-    line-height:28px;
-}
-/* passaggio del cursore sul bottone elimina l'ombra*/
-a.acquistaR:hover {
-    top: 3px;
-    background-color: rgba( 193, 193, 193, 0.90 );
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-a.acquistaR:hover {
-    background-color: #B21800;
-}
-
 /** STILI PROSSIMO E PRECEDENTE **/
 .dx {
     font-size: 16px;
@@ -348,3 +314,36 @@ hr {
     font-weight: 800;
 }
 
+/** stili per smart life per categoria **/
+
+.smart-title-large {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    padding-top: 18px;
+
+}
+
+
+.smart-title-large .smart_cat_name {
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: 5px;
+    z-index: 2;
+
+}
+
+.smart-title-large .smart_cat_des {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 10%;
+        padding-right: 10%;
+    padding-top: 0px;
+    z-index: 2;
+}
+.smart-cat-large {
+    z-index: 1;
+}

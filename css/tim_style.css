@@ -250,6 +250,18 @@ a.acquistaR {
     line-height:28px;
 }
 
+/* passaggio del cursore sul bottone elimina l'ombra*/
+a.buttonDB:hover, a.buttonSB:hover, a.acquistaR:hover {
+    top: 3px;
+    background-color: rgba( 193, 193, 193, 0.90 );
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+a.acquistaR:hover {
+    background-color: #B21800;
+}
+
 .centered {
     text-align: center;
     align-content: center;
