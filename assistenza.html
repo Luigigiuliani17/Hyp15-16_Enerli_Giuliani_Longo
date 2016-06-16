@@ -11,6 +11,7 @@
         <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
         <link href="css/tim_style.css" rel="stylesheet">
         <link href="css/assistenza.css" rel="stylesheet">
+        <link href="css/magic-check.min.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,14 +56,16 @@
                         <h2 id="nome_ass"><!--contenuto dinamico --></h2>
 
                         <h2>Descrizione</h2>
+                        <div id="img_promo"><!--immagine da contenuto dinamico --></div>
                         <div id="descrizione"><!--contenuto dinamico --></div>
                     </div><!-- /end row -->
                     <div class="row cgt">
-                        <div class="col-xs-6 sx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span> precedente</a></div>
-                        <div class="col-xs-6 dx"><a  id="next-prod" href="">prossimo <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                    <div class="col-xs-6 sx"><a id="prev-prod" href="lol nope"><span class="glyphicon glyphicon-chevron-left"></span> precedente</a></div>
+                    <div class="col-xs-6 dx"><a  id="next-prod" href="">prossimo <span class="glyphicon glyphicon-chevron-right"></span></a></div>
+                </div>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                </div><!-- / fine presentazione -->
+                <!-- / fine presentazione -->
             </section>
 
             <!-- Riquadro con le FAQ -->
@@ -77,6 +80,7 @@
                 <!-- Riquadro con i prodotti compatibili con questa assistenza -->
                 <div class="container marketing">
                     <h2>Assistenza valida per i seguenti prodotti</h2>
+                    <div id="prod-list" class="prod-list row"><!-- CONTENUTO DINAMICO --></div>
                 </div>
             </section>
 

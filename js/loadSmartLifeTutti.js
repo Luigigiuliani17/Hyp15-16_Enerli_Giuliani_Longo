@@ -56,7 +56,7 @@ function getFromDB(){
                         res +=             '<p class="smart_title">' + smartLifeByCat[i].nome_smart_life + '</p>';
                         res +=             '<p class="smart_txt">' + smartLifeByCat[i].descrizione_breve + '</p>';
                         res +=       '</div>';
-                        res +=       '<p class="hbtn"><a href="#" class="button">Scopri</a></p>';
+                        res +=       '<p class="hbtn"><a href="smartLife.html?id=' + smartLifeByCat[i].smart_life_id +'" class="button buttonTutti">Scopri</a></p>';
                         //chiudo thumbnail
                         res +=  '</div>';
                         //chiudo col-xs-12...

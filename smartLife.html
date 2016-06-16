@@ -5,8 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>TIM - I nostri Prodotti</title>
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        <title>TIM - I nostri Smart Life</title>
         <!-- Bootstrap -->
         <link href="bootstrap/css/bootstrap_personalcolor.min.css" rel="stylesheet">
         <link href="css/tim_style.css" rel="stylesheet">
@@ -34,10 +33,9 @@
             </div>
             <div class="sec-nav-collapse collapse navbar-collapse navbar-responsive-collapse">
                 <ul class="navbar-right nav navbar-nav">
-                    <li><a href="#desc">Servizio</a></li>
-                    <li><a href="#spec">Descrizione</a></li>
-                    <li><a href="#sl">Regole e attivazione</a></li>
-                    <li><a href="#ass">Dispositivi compatibili</a></li>
+                    <li><a href="#desc">Descrizione</a></li>
+                    <li><a href="#reg">Regole e attivazione</a></li>
+                    <li><a href="#pr">Dispositivi compatibili</a></li>
                     <li><a href="#acq">Acquista</a></li>
                 </ul>
             </div>
@@ -51,10 +49,10 @@
             <div class="row">
                 <!-- descrizione -->
                 <div class="col-xs-12 col-sm-6 col-sm-push-6">
-                    <h2 id="nome-smart-life"><!-- contenuto dinamico --></h2>
+                    <h2 id="nome_smart_life"><!-- contenuto dinamico --></h2>
                     <div class="caratt-basic">
                         <h3>Caratteristiche</h3>
-                        <ul id="caratteristiche-base"><!-- contenuto dinamico --></ul>
+                        <ul id="caratteristiche_base"><!-- contenuto dinamico --></ul>
                     </div>
                     <div class="centered">
                         <hr>
@@ -100,6 +98,8 @@
             </div>
         </section>
 
+
+        <!-- Riquadro con le regole e attivazione del prodotto -->
         <section id="reg">
             <!-- Riquadro con le specifiche tecniche del prodotto -->
             <div class="container marketing">
@@ -112,6 +112,7 @@
             <!-- Riquadro con i servizi compatibili con il prodotto -->
             <div class="container marketing">
                 <h2>Prodotti compatibili con questo servizio</h2>
+                <div id="prod-list" class="prod-list row"><!-- CONTENUTO DINAMICO --></div>
             </div>
         </section>
 
@@ -134,7 +135,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="/js/loadProdotto.js"></script>
+        <script src="/js/loadSmartLife.js"></script>
         <script src="/js/second-nav-scrolling.js"></script>
         <script>
             $(function(){

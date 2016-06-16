@@ -69,28 +69,7 @@ a.buttonDB {
     position: relative;
     line-height:28px;
 }
-/*bottone acquista rosso*/
-a.acquistaR {
-    font-size: 14px;
-    font-weight: 500;
-    color: white;
-    display: inline-block;
-    float: center;
-    text-align: center;
-    text-decoration: none;
-    width: 180px; height: 28px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #EA1F05;
-    -webkit-box-shadow: 0 3px rgba(255,35,50,.75);
-    -moz-box-shadow: 0 3px rgba(255,35,50,.75);
-    box-shadow: 0 3px rgba(255,35,50,.75);
-    transition: all 0.1s linear 0s;
-    top: 0px;
-    position: relative;
-    line-height:28px;
-}
+
 /* passaggio del cursore sul bottone elimina l'ombra*/
 a.buttonDB:hover, a.buttonSB:hover, a.acquistaR:hover {
     top: 3px;
@@ -103,22 +82,7 @@ a.acquistaR:hover {
     background-color: #B21800;
 }
 
-/** STILI PROSSIMO E PRECEDENTE **/
-.dx {
-    text-align: right;
-    color: #0b3d86;
-}
-.sx {
-    text-align: left;
-    color: #0b3d86;
-}
-.dx > a, .sx > a {
-    font-size: 14px;
-    color: #0b3d86;
-}
-.cgt {
-    padding-top: 20px;
-}
+
 
 
 /*formato dei titoli*/

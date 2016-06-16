@@ -56,34 +56,12 @@ h2 + h2 {
     padding-top: 0px;
 }
 
-
-/** STILI PROSSIMO E PRECEDENTE **/
-.dx {
-    font-size: 16px;
-    text-align: right;
-    color: #0b3d86;
-}
-.sx {
-    font-size: 16px;
-    text-align: left;
-    color: #0b3d86;
-}
-.dx > a, .sx > a {
-    font-size: 20px;
-    color: #0b3d86;
-}
-.cgt {
-    padding-top: 20px;
-}
-
 #descrizione{
     list-style-type:none;
-    font-size: 125%;
 }
 
 #faq{
     list-style-type:none;
-    font-size: 125%;
 }
 
 /*formato dei titoli*/
@@ -118,4 +96,32 @@ textarea{
     resize: vertical;
 
     padding-right: 40px;
+}
+
+/* sovrascrivo il container marketing per inserire l'immagine per la promo */
+.container.marketing {
+    align-self: center;
+    max-width: 100%;
+    background-color: white;
+    padding: 40px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* fissa l'immagine al lato destro della descrizione*/
+.over-img {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    top: 0%;
+    left: 90%;
+}
+
+/* scala immagine per schermi piccoli */
+@media(max-width:767px) {
+    .over-img{
+    left: 75%;
+    	width: 25%;}
 }

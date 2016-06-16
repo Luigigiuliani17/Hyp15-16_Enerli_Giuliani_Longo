@@ -23,12 +23,18 @@
         <!-- Includo navbar da altro file -->
         <header id="includedNavbar"></header>
 
-        <div id="path" class="path">
+  <div id="path" class="path">
         </div>
-        <!-- CONTENUTO DELLA PAGINA GENERATO DINAMICAMENTE -->
-        <!-- Per ogni categoria voglio generare un riqudro contenente titolo e le assitenze -->
-        <div id="all-ass"></div>
 
+        <div class= "container">
+            <div class="container marketing">
+                <div class="row ass-title">
+                    <img id="icon-cat" src=""/>
+                    <a id="nome-cat" href="#"></a>
+                </div>
+                <div id="content"></div>
+        </div>
+        </div>
         <!-- Includo footer da altro file -->
         <footer id="includedFooter" class="panel-footer"></footer>
 
@@ -36,7 +42,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="bootstrap/js/bootstrap.min.js"></script>
-        <script src="js/loadAssistenza.js"></script>
+        <script src="js/loadAssistenzeByCategoria.js"></script>
         <script>
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");

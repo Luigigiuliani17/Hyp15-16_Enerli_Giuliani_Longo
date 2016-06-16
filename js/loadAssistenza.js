@@ -8,6 +8,10 @@ function ready(){
     // ora carica da database il prodotto con quell'id
     getFromDB(id);
 
+    // carica da DB i prodotti compatibili con le assistenze
+    getProdAss(id);
+
+
 }
 
 
@@ -61,9 +65,20 @@ function getFromDB(id){
 
 
             // scrivo direttamente sull'html i componenti che possono essere scritti senza elaborazione
-           $('#title').html('TIIM - '+assistenza.nome_ass);
-           $("#path").html(path);
+            $('#title').html('TIIM - '+assistenza.nome_ass);
+            $('#path').html(path);
             $("#nome_ass").html(assistenza.nome_ass);
+
+
+            //creazione immagine della promo
+            if(assistenza.promo[0]==1){
+                var img = '<span class = "over-img" >';
+                img += '<img src="/images/offerte/evidenza.png" alt="Image not available, sorry." class="img-responsive"/>';
+                img += '</span>';
+           		console.log(img);
+              	$("#img_promo").html(img);
+           }
+            //scrivo img_promo su html
 
 
             // gestione della descrizione
@@ -74,10 +89,10 @@ function getFromDB(id){
                 descr_str += '<li>' + caratt[i] +'</li>';
             }
 
-             $("#descrizione").html(descr_str);
+            $("#descrizione").html(descr_str);
 
 
-              // gestione delle FAQ
+            // gestione delle FAQ
             var faq_str = "";
             //parso le caratteristiche per creare diversi elementi di una lista
             var caratt = parsec(assistenza.faq);
@@ -85,7 +100,7 @@ function getFromDB(id){
                 faq_str += '<li>' + caratt[i] +'</li>';
             }
 
-             $("#faq").html(faq_str);
+            $("#faq").html(faq_str);
 
 
             //installa il guided tour circolare sui prodotti della stessa categoria
@@ -138,6 +153,38 @@ function getAssCGT(ass_id, cat_id) {
             $("#next-prod").attr('href', 'assistenza.html?id='+next);
         },
         error: function(request,error) {
+            console.log("Error");
+        }
+    });
+}
+
+/* funzione per caricare i prodotti compatibili con l'assistenza dal db */
+function getProdAss(id){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://tiim.altervista.org/php/getProdottoAss.php", //Relative or absolute path to file.php file
+        data: {ass_id:id},
+        success: function(response) {
+            // in prodotto dovrebbe esserci un elemento richiesto
+            var prodotti = JSON.parse(response);
+            var res = "";
+
+            for (var i = 0; i<prodotti.length; i++) {
+                res += '<div class="col-xs-6 col-sm-3 col-md-2">';
+                res +=      '<div class="thumbnail">';
+                res +=          '<a href="prodotto.html?id=' + prodotti[i].prod_id + '">';
+                res +=              '<img src="/images/prodotti/anteprime/ante_' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=          '</a>'
+                res +=      '</div>';
+                res += '</div>';
+            }
+
+            $("#prod-list").html(res);
+        },
+        error: function(request,error)
+        {
             console.log("Error");
         }
     });

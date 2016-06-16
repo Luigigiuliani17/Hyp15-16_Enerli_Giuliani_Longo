@@ -1,6 +1,6 @@
 <?php
 // ritrova le categorie dal database e risponde con un JSON object
-$prod_id=$_POST["prod_id"];
+$smart_life_id=$_POST["smart_life_id"];
 
 // prova a stabilire una connessione con il database
 $mysqli = new mysqli("localhost", "root", "", "my_tiim");
@@ -15,7 +15,8 @@ if (mysqli_connect_errno()) { //verify connection
 // più gli id del servizio precedente e del prossimo
 else {
     # extract results mysqli_result::fetch_array
-    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, prezzo, img1, img2, img3, Smart_Life.descrizione_completa, categoria, regole_attivazione, caratteristiche, Categorie.nome AS nome_cat FROM Smart_Life join Categorie on categoria = cat_id WHERE smart_life_id = $smart_life_id";
+
+    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, prezzo, img1, img2, img3, descrizione_completa, categoria, regole_attivazione, caratteristiche, Categorie.nome AS nome_cat FROM Smart_Life join Categorie on categoria = cat_id WHERE smart_life_id = $smart_life_id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
