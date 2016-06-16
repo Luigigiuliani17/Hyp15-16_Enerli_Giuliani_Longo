@@ -33,10 +33,11 @@ function getProdPromo(tipo){
 
             var prodotti = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/prodotti.css")
+            $("#css-link").attr('href', "/css/prodotti.css");
             //carico il titolo della pagina e il banner
-            $("#title").html("TIIM - Prodotti in promozione")
-            $("#banner").attr('src', "/images/offerte/banner_prod_promo.png")
+            $("#title").html("TIIM - Prodotti in promozione");
+            $("#path").html('<a href="prodottiTutti.html">> Prodotti</a> > Promozione');
+            $("#banner").attr('src', "/images/offerte/banner_prod_promo.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "";
@@ -82,10 +83,11 @@ function getSLPromo(tipo) {
 
             var prodotti = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/smart_life.css")
+            $("#css-link").attr('href', "/css/smart_life.css");
             //carico il titolo della pagina e il banner
-            $("#title").html("TIIM - Smart Life in promozione")
-            $("#banner").attr('src', "/images/offerte/banner_sl_promo.png")
+            $("#title").html("TIIM - Smart Life in promozione");
+            $("#path").html('<a href="smartLifeTutti.html">> SmartLife</a> > Promozione');
+            $("#banner").attr('src', "/images/offerte/banner_sl_promo.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "lolololol";
@@ -119,10 +121,11 @@ function getAssPromo(tipo) {
 
             var assistenza = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/assistenza.css")
+            $("#css-link").attr('href', "/css/assistenza.css");
             //carico il titolo della pagina e il banner
-            $("#title").html("TIIM - Assistenza in evidenza")
-            $("#banner").attr('src', "/images/offerte/banner_ass_evi.png")
+            $("#title").html("TIIM - Assistenza in evidenza");
+            $("#path").html('<a href="assistenzaTutti.html">> Assistenza</a> > In evidenza');
+            $("#banner").attr('src', "/images/offerte/banner_ass_evi.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = '<div class="row">';

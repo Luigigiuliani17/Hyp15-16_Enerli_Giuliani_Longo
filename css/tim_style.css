@@ -272,3 +272,8 @@ a.acquistaR {
 .cgt {
     padding-top: 20px;
 }
+
+/*modifica colore link nel path e assistenza singole*/
+a{
+    color: #0b3d86;;
+}
