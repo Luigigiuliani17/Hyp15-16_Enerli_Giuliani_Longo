@@ -183,24 +183,7 @@ a.buttonTutti:hover {
 }
 
 
-/** STILI PROSSIMO E PRECEDENTE **/
-.dx {
-    font-size: 16px;
-    text-align: right;
-    color: #0b3d86;
-}
-.sx {
-    font-size: 16px;
-    text-align: left;
-    color: #0b3d86;
-}
-.dx > a, .sx > a {
-    font-size: 20px;
-    color: #0b3d86;
-}
-.cgt {
-    padding-top: 20px;
-}
+
 /*formato dei titoli*/
 h2 {
     color: #0b3d86;
