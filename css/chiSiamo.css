@@ -80,7 +80,8 @@ nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 40%;
+    top: 50%;
+    left: 0px;
 }
 @media (max-width: 767px) {
     .banner > span {
@@ -256,7 +257,7 @@ hr {
 @media (max-width: 767px) {
     hr{
         margin-top: 20px;
-    margin-bottom: 20px;
-    border-top: 1px solid black;
+        margin-bottom: 20px;
+        border-top: 1px solid black;
     }
 }
