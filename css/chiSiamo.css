@@ -263,3 +263,13 @@ hr {
         border-top: 1px solid black;
     }
 }
+
+#banner1 > span {
+    top: 37%;
+}
+
+@media (max-width: 767px) {
+    #banner1 > span {
+        top: 46%;
+    }
+}
