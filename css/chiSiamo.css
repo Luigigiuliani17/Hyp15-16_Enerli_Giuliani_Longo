@@ -173,8 +173,9 @@ h5.citato {
 }
 /************************* TESTIMONIALZ ***************************************** END */
 
+/************************ INNOVA ZIO! ****************************/
 
-/* INNOVAZIONE */
+
 .tondo{
     padding-top: 20px;
     text-align: center;
@@ -220,7 +221,7 @@ h5.citato {
 /*Container testo dell'introduzione (sotto al titolo rosso*/
 .intro{
     padding-top: 50px;
-    padding-right: 20%;
+    padding-right: 5%;
 }
 
 @media (max-width: 767px) {
@@ -236,12 +237,14 @@ h5.citato {
     font-size: 150%;
     text-align: justify;
     line-height: 25px;
+
 }
 
 @media (max-width: 767px) {
     .descr{
-        font-size: 120%;
+        font-size: 110%;
         line-height: 20px;
+        padding-right: 0px;
     }
 }
 
