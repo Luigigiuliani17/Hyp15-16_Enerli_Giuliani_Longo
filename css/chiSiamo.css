@@ -208,8 +208,8 @@ h5 {
 @media (max-width: 767px) {
     .subtitle{
         font-size: 120%;
-        text-align: justify;
         line-height: 20px;
+        text-align: center;
     }
 }
 
@@ -238,7 +238,6 @@ h5 {
     .descr{
         font-size: 120%;
         line-height: 20px;
-        padding-right: 0px;
     }
 }
 
