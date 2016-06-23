@@ -80,12 +80,12 @@ function getFromDB(id){
             $('#im1').html(image1);
 
             if (smartLife.img2 != null) {
-                tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img2 + '" alt="" class="img-responsive"/></a></li>';
+                tab += '<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img2 + '" alt="" class="img-responsive"/></a></li>';
                 image2 += '<img src="images/smart_life/' + smartLife.img2 + '" alt="" class="img-responsive"/>';
                 $('#im2').html(image2);
             }
             if (smartLife.img3 != null) {
-                tab += '<li class="active col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img3 + '" alt="lol" class="img-responsive"/></a></li>';
+                tab += '<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a href="#im1" data-toggle="tab"><img src="images/smart_life/' + smartLife.img3 + '" alt="lol" class="img-responsive"/></a></li>';
                 image3 += '<img src="images/smart_life/' + smartLife.img3 + '" alt="lol" class="img-responsive"/>';
                 $('#im3').html(image3);
             }

@@ -3,8 +3,9 @@
     background-image: url("../images/smart_life/banner1.png");
     background-size: cover;
     overflow: hidden;
-    height: 150px;
+    height: 200px;
     padding-top: 18px;
+    margin-bottom: 0px;
 }
 
 
@@ -12,17 +13,17 @@
     color: white;
     font-size: 2.5em;
     text-align: center;
-    vertical-align: top;
+    vertical-align: ;
     margin-bottom: 5px;
 
 }
 
-.jumbotron .smart_cat_des {
+.smart_cat_des {
     color: white;
     text-align: center;
     font-size: 1.2em;
     padding-left: 10%;
-        padding-right: 10%;
+    padding-right: 10%;
     padding-top: 0px;
 }
 
@@ -39,6 +40,7 @@
     border-color: #0b3d86;
 
 }
+
 
 /* modifiche allo stile del percorso dalla home alla pagina attuale */
 .path {
@@ -58,13 +60,6 @@
 
 }
 
-/* gestione distanze tra i riquadri */
-.main-content {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin: 0 auto;
-    max-width: 340px;
-}
 
 /*** STILI BOTTONI ***/
 /* bottone "Scopri" bianco */
@@ -112,15 +107,15 @@ a.buttonTutti:hover {
     position: absolute;
     top: 20%;
     right: 0%;
-     width: 50%;
+    width: 50%;
 }
 
 /* posizionamento del testo nei riquadri principali */
 .smart_txt{
-        align-self: flex-end;
-        color: #0b3d86;
-        text-align: center;
-    }
+    align-self: flex-end;
+    color: #0b3d86;
+    text-align: center;
+}
 
 @media (max-width: 467px) {
     .smart_txt{
@@ -297,36 +292,98 @@ hr {
     font-weight: 800;
 }
 
-/** stili per smart life per categoria **/
+/**gestione pagina singola categoria**/
 
-.smart-title-large {
-    position: relative;
-    overflow: hidden;
-    height: 200px;
-    padding-top: 18px;
+
+a.blueScopri {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    float: center;
+    text-align: center;
+    text-decoration: none;
+    border-style: solid;
+    border-width: 2px;
+    width: 130px; height: 28px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #0b3d86;
+    -webkit-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    -moz-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    transition: all 0.1s linear 0s;
+    top: 0px;
+    line-height:28px;
+    position: absolute;
+    top: 80%;
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
 
 }
 
 
-.smart-title-large .smart_cat_name {
-    color: white;
-    font-size: 2.5em;
-    text-align: center;
-    vertical-align: top;
+
+/* posizionamento del riquadro di testo all'interno del singolo smart life  */
+.smart_large_text_area{
+    padding: 5% 5% 5% 5%;
+    position: absolute;
+    top: 40%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+/*add margin after each large smart life*/
+.col-sm-12  {
+
+    margin-bottom: 30px;
+
+}
+
+/*add border to each image*/
+.col-sm-12  img {
+    border-style: groove;
+    border-color:  #0b3d86;
+    border-width: thin;
+}
+
+.smart_large_text_area h1 {
+    color: #0b3d86;
+    font-size: 32px;
     margin-bottom: 5px;
-    z-index: 2;
+}
+
+.smart_large_text_area h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 30px;
 
 }
 
-.smart-title-large .smart_cat_des {
-    color: white;
-    text-align: center;
-    font-size: 1.2em;
-    padding-left: 10%;
-        padding-right: 10%;
-    padding-top: 0px;
-    z-index: 2;
+@media (max-width: 640px) {
+    .smart_large_text_area h1 {
+        font-size: 24px;
+
+    }
 }
-.smart-cat-large {
-    z-index: 1;
-}
+
+@media (max-width: 640px) {
+    .smart_large_text_area h2 {
+        font-size: 16px;
+
+    }
+
+@media (min-width: 1000px) {
+        .smart_large_text_area h1 {
+            font-size: 80px;
+
+        }
+    }
+
+@media (min-width: 1000px) {
+        .smart_large_text_area h2 {
+            font-size: 32px;
+
+        }

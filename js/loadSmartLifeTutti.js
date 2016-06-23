@@ -39,11 +39,12 @@ function getFromDB(){
                 // se c'è almeno uno smart life per quella categoria:
                 if (smartLifeByCat.length > 0) {
                     // creo l'introduzione
-                    res += '<div class="container marketing">';
+
                     res +=    '<div class="jumbotron">';
                     res +=      '<p class="smart_cat_name">' + smartLifeByCat[0].nome_cat + '</p>'
                     res +=      '<p class="smart_cat_des">' + smartLifeByCat[0].descrizione + '</p>'
                     res +=   '</div>'
+                    res += '<div class="container marketing">';
                     // inizia la riga degli smart life:
                     res +=  '<div class="row">'
                     // raccolta degli smart life

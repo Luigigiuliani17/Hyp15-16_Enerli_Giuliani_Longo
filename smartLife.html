@@ -61,6 +61,7 @@
                         <a href="#acquista" class="button acquistaR">ACQUISTA</a>
                     </div>
                 </div>
+
                 <!-- slider delle immagini del prodotto, a sinistra, ma che se ridotto lo schermo va dopo la descrizione -->
                 <div class="col-xs-12 col-sm-6 col-sm-pull-6">
                     <div class="tabbable">
@@ -116,11 +117,13 @@
 
 
         <section id="acq">
-            <!-- Riquadro con il form per acquistare il prodotto -->
-            <div id="acquista" class="container marketing">
-                <h2>Acquista</h2>
-            </div>
-        </section>
+                <!-- Riquadro con il form per acquistare il prodotto -->
+                <div id="acquista" class="container marketing">
+                    <h2>Acquista</h2>
+                    <form id="includedForm" class="form-horizontal"></form>
+                </div>
+            </section>
+
 
 
         <!-- Includo footer da altro file -->
@@ -139,6 +142,7 @@
             $(function(){
                 $("#includedNavbar").load("/html-componenti/navbar.html");
                 $("#includedFooter").load("/html-componenti/footer.html");
+                $("#includedForm").load("/html-componenti/form-acquista.html");
             });
         </script>
     </body>
