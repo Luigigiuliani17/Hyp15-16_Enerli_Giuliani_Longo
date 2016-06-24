@@ -305,7 +305,7 @@ hr {
     font-weight: 800;
 }
 
-/**gestione pagina singola categoria**/
+/**--------------------------------------------gestione pagina singola categoria**/
 
 
 a.blueScopri {
@@ -334,6 +334,13 @@ a.blueScopri {
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%);
 
+}
+
+a.blueScopri:hover {
+    margin-top: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 
@@ -388,15 +395,3 @@ a.blueScopri {
 
     }
 
-@media (min-width: 1000px) {
-        .smart_large_text_area h1 {
-            font-size: 80px;
-
-        }
-    }
-
-@media (min-width: 1000px) {
-        .smart_large_text_area h2 {
-            font-size: 32px;
-
-        }

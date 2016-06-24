@@ -63,7 +63,7 @@ function getFromDB(type){
                 	path += '<a  href="prodottiTutti.html">> Prodotti</a> > Categorie';
                     break;
                 case 2:
-                	path += '<a  href="serviziTutti.html">> Smart Life</a> > Categorie';
+                	path += '<a  href="smartLifeTutti.html">> Smart Life</a> > Categorie';
                     break;
                 case 3:
                 	path += '<a  href="assistenzaTutti.html">> Assistenza</a> > Categorie';
@@ -97,7 +97,7 @@ function getFromDB(type){
                     res += 		'<section class="hsquare">';
                     res += 			'<img src="/images/categorie/' + categorie[i].img + '" alt="Image not available, sorry." class="img-responsive">';
                     res += 			'<p class="htxt">'+ categorie[i].nome + '</p>';
-                    res += 			'<p class="hbtn"><a href="serviziPerCategoria.html?cat_id=' + categorie[i].cat_id + '" class="button buttonSB">Scopri</a></p>';
+                    res += 			'<p class="hbtn"><a href="smartLifePerCategoria.html?cat_id=' + categorie[i].cat_id + '" class="button buttonSB">Scopri</a></p>';
                     res += 		'</section>';
                     res += 	'</div>';
                     res += '</div>';
