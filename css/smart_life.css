@@ -77,10 +77,10 @@ a.buttonTutti {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    background-color: #EA1F05;
-    -webkit-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
-    -moz-box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
-    box-shadow: 0 3px rgba( 193, 193, 193, 0.744 );
+    background-color: #0b3d86;
+    -webkit-box-shadow: 0 3px rgba( 10, 104, 255, 0.844 ));
+    -moz-box-shadow: 0 3px rgba( 10, 104, 255, 0.844 );
+    box-shadow: 0 3px rgba( 10, 104, 255, 0.844 );
     transition: all 0.1s linear 0s;
     top: 0px;
     position: absolute;
@@ -90,13 +90,25 @@ a.buttonTutti {
 
 }
 
+
 a.buttonTutti:hover {
-    background-color: rgba( 193, 193, 193, 0.90 );
+    margin-top: 3px;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
 }
 
+
+/** MODIFICHE DI STILE PER FAR SI CHE L'IMMAGINE DELLA PROMO SIA SOVRAPPONIBILE ALL'ANTEPRIMA DEL PRODOTTO **/
+.thumbnail.over {
+    position: relative;
+}
+.over-img {
+    width: 100px;
+    position: absolute;
+    top:0%;
+    left: 0%;
+}
 
 
 
@@ -233,11 +245,12 @@ hr {
     margin-top: 10px;
 }
 .nav-tabs {
+    margin-top: 10px;
     border-top: 0px;
     border-bottom: 0px;
 }
 .nav-tabs > li {
-    padding: 0px;
+    padding: 10px;
     float: left;
     margin-bottom: -1px;
 }

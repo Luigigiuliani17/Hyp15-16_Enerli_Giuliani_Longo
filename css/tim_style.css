@@ -207,8 +207,8 @@ nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
     padding-top: 45px;
 }
 @media (max-width:767px){
-	.path {
-    	padding-bottom: 20px;
+    .path {
+        padding-bottom: 20px;
     }
 }
 
@@ -226,6 +226,18 @@ nav.second-navbar.navbar-inverse > .navbar-header > .navbar-brand {
 fieldset {
     padding-top: 10px;
 }
+
+/*posizionamento pulsante acconsento al trattamento dati personali nel form acquista */
+.acconsenti_label{
+    margin-top: 62px;
+}
+
+@media (max-width: 767px) {
+    .acconsenti_label{
+        margin-top: 20px;
+    }
+}
+
 
 /*bottone acquista rosso*/
 a.acquistaR {
