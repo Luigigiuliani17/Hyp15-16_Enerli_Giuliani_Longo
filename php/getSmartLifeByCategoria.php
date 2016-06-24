@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 else {
     // connessione ok
     # extract results mysqli_result::fetch_array
-    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, thumbnail, descrizione_breve, prezzo, isPromo FROM `Smart_Life` WHERE categoria = $cat";
+    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, anteprima_big, descrizione_breve, prezzo, isPromo FROM `Smart_Life` WHERE categoria = $cat";
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array

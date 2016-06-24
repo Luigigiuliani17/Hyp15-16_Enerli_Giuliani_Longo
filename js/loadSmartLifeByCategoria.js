@@ -11,7 +11,7 @@ function ready(){
     // carica da database il nome e l'icona della categoria
     getCatFromDB(cat_id);
 
-    // carica i prodotti di quella categoria
+    // carica gli smart life di quella categoria
     getSmartFromDB(cat_id);
 
 }
@@ -50,33 +50,50 @@ function getSmartFromDB(cat){
         data: {categoria:cat},
         url: "http://tiim.altervista.org/php/getSmartLifeByCategoria.php",
         success: function(response) {
-            // in categoria dovrebbe esserci un vettore di elementi prodotti di una categoria.
+            // in categoria dovrebbe esserci un vettore di elementi smart life di una categoria.
             var smartlife = JSON.parse(response);
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "";
-/*
-            // raccolta dei prodotti
+
+            /*
+             <div class= "col-sm-12">
+
+
+                        <img src="images/smart_life/anteprima_large/tim-reading.jpg" alt='Grand Canyon', class="img-responsive">
+                        <div class="smart_large_text_area">
+                            <h1 id=smart_title>Titolo</h1>
+                            <h2 id=smart_subtitle>Scopri il servizio sciallo ballo ciana town</h2>
+
+                        </div>
+                        <a class="blueScopri" href="promo.html?type=1" >Scopri</a>
+
+
+                    </div>
+            */
+
+
+            // raccolta dei smart life
             for (var i = 0; i < smartlife.length; i++) {
-                // costruisco iun thumbnail per ogni prodotto
-                res += '<div class="col-xs-12 col-sm-6 col-md-3">';
-                res += 	'<div class="thumbnail over">';
-                res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
-                if (prodotti[i].promo == 1) {
+                // costruisco  un col-sm-12 per ogni smart life
+                res += ' <div class= "col-sm-12">';
+
+                res += 		'<img src="images/smart_life/anteprima_large/'+ smartlife[i].anteprima_big + '" alt="Image not available, sorry." class="img-responsive">';
+                if (smartlife[i].isPromo == 1) {
                     res += '<span class="over-img">';
                     res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                     res += '</span>';
                 }
-                res +=       '<div class="caption">';
-                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '"><h4>' + prodotti[i].nome_prod +'</h4></a>';
-                res += 		       '<h5>' + prodotti[i].prezzo + ' &euro;</h5>'
-                res += 		       '<a href="prodotto.html?id=' + prodotti[i].prod_id + '" class="button buttonDB">Dettagli</a>';
+                res +=       '<div class="smart_large_text_area">';
+                res += 		       '<h1 id=smart_title>'+ smartlife[i].nome_smart_life +'</h1>';
+                res += 		       '<h2 id=smart_subtitle>' + smartlife[i].descrizione_breve + '</h2>';
                 res += 	     '</div>';
-                res +=  '</div>';
+                res +=       '<a class="blueScopri" href="smartLife.html?id=' + smartlife[i].smart_life_id +'" >Scopri</a>';
+
                 res += '</div>';
             }
 
-            $("#content").html(res);
-*/
+            $("#dynamic_content").html(res);
+
         },
         error: function(request,error)
         {
