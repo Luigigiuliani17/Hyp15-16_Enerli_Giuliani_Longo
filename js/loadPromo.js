@@ -81,7 +81,7 @@ function getSLPromo(tipo) {
         url: "http://tiim.altervista.org/php/getPromo.php",
         success: function(response) {
 
-            var prodotti = JSON.parse(response);
+            var smartlife = JSON.parse(response);
             // carico il css adatto
             $("#css-link").attr('href', "/css/smart_life.css");
             //carico il titolo della pagina e il banner
@@ -90,14 +90,34 @@ function getSLPromo(tipo) {
             $("#banner").attr('src', "/images/offerte/banner_sl_promo.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
-            var res = "lolololol";
+            var res = "";
 
-            // SVILUPPO DEL CONTENUTO DINAMICO
-            //-------------------
-            //-------------------
-            //-------------------
-            //-------------------
-            //-------------------
+            // raccolta dei prodotti
+            for (var i = 0; i < smartlife.length; i++) {
+
+                // costruisco iun thumbnail per ogni smart life
+                res += '<div class="col-xs-12 col-sm-6 col-md-4">';
+                res += 	'<div class="thumbnail">';
+                res += 		'<img src="/images/smart_life/anteprime/'+ smartlife[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+
+                //if it is promo
+                if (smartlife[i].isPromo == 1) {
+                    res += '<span class="over-img">';
+                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res += '</span>';
+                }
+
+                res +=          '<div class="smart_txt_div">';
+                res +=             '<p class="smart_title">' + smartlife[i].nome + '</p>';
+                res +=             '<p class="smart_txt">' + smartlife[i].descrizione_breve + '</p>';
+                res +=       '</div>';
+                res +=       '<p class="hbtn"><a href="smartLife.html?id=' + smartlife[i].smart_life_id +'" class="button buttonTutti">Scopri</a></p>';
+                //chiudo thumbnail
+                res +=  '</div>';
+                //chiudo col-xs-12...
+                res += '</div>';
+
+            }
 
             $("#content").html(res);
 
