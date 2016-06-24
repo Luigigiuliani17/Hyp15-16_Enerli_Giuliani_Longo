@@ -11,7 +11,7 @@ else {
     // connessione ok
     # extract results mysqli_result::fetch_array
     // seleziono tutti i prodotti aggiungendo il nome della categoria e l'icona
-    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, thumbnail, categoria, descrizione_breve, Categorie.nome AS nome_cat, Categorie.descrizione as descrizione FROM `Smart_Life` JOIN `Categorie` ON categoria = cat_id";
+    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, thumbnail, categoria, descrizione_breve, isPromo, Categorie.nome AS nome_cat, Categorie.descrizione as descrizione FROM `Smart_Life` JOIN `Categorie` ON categoria = cat_id";
     // esecuzione della query
     $result = $mysqli->query($query);
     // se ci sono risultati: li mette in array

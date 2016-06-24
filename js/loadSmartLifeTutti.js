@@ -53,6 +53,14 @@ function getFromDB(){
                         res += '<div class="col-xs-12 col-sm-6 col-md-4">';
                         res += 	'<div class="thumbnail">';
                         res += 		'<img src="/images/smart_life/anteprime/'+ smartLifeByCat[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+
+                        //if it is promo
+                        if (smartLifeByCat[i].isPromo == 1) {
+                            res += '<span class="over-img">';
+                            res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                            res += '</span>';
+                        }
+
                         res +=          '<div class="smart_txt_div">';
                         res +=             '<p class="smart_title">' + smartLifeByCat[i].nome_smart_life + '</p>';
                         res +=             '<p class="smart_txt">' + smartLifeByCat[i].descrizione_breve + '</p>';

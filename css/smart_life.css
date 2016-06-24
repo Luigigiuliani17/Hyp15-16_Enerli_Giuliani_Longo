@@ -107,7 +107,7 @@ a.buttonTutti:hover {
     width: 100px;
     position: absolute;
     top:0%;
-    left: 0%;
+    left: 15px
 }
 
 
@@ -154,7 +154,7 @@ a.buttonTutti:hover {
 
 @media (max-width: 467px) {
     .smart_title {
-        font-size: 0.8em;
+        font-size: 1em;
 
     }
 }
@@ -363,35 +363,54 @@ a.blueScopri:hover {
 }
 
 /*add border to each image*/
-.col-sm-12  img {
+.col-sm-12 .img-responsive {
     border-style: groove;
     border-color:  #0b3d86;
     border-width: thin;
 }
 
-.smart_large_text_area h1 {
+/* remove border from promo over img*/
+.over-img .img-responsive {
+    border-style: none;
+}
+
+/*style of title and subtitle of the smart life large title and subtitle */
+#smart_title {
     color: #0b3d86;
-    font-size: 32px;
-    margin-bottom: 5px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.smart_large_text_area h2 {
+#smart_subtitle {
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 30px;
-
 }
 
 @media (max-width: 640px) {
-    .smart_large_text_area h1 {
+    #smart_title {
         font-size: 24px;
+    }
+}
 
+@media (max-width: 400px) {
+    #smart_title {
+        font-size: 18px;
     }
 }
 
 @media (max-width: 640px) {
-    .smart_large_text_area h2 {
+    #smart_subtitle {
         font-size: 16px;
-
     }
+}
+
+@media (max-width: 400px) {
+    #smart_subtitle {
+        font-size: 0px;
+    }
+}
+
+
+
 
