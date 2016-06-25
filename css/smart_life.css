@@ -1,4 +1,4 @@
-.jumbotron {
+.container .jumbotron {
     position: relative;
     background-image: url("../images/smart_life/banner1.png");
     background-size: cover;
@@ -6,6 +6,15 @@
     height: 200px;
     padding-top: 18px;
     margin-bottom: 0px;
+    -webkit-border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+     border-radius: 6px 6px 0px 0px;
+}
+
+.container.marketing.smart {
+    -webkit-border-radius: 0px 0px 8px 8px;
+    -moz-border-radius: 0px 0px 8px 8px;
+     border-radius: 0px 0px 8px 8px;
 }
 
 
