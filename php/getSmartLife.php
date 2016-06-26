@@ -16,7 +16,7 @@ if (mysqli_connect_errno()) { //verify connection
 else {
     # extract results mysqli_result::fetch_array
 
-    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, prezzo, img1, img2, img3, descrizione_completa, categoria, regole_attivazione, caratteristiche, Categorie.nome AS nome_cat FROM Smart_Life join Categorie on categoria = cat_id WHERE smart_life_id = $smart_life_id";
+    $query = " SELECT smart_life_id, Smart_Life.nome AS nome_smart_life, prezzo, img1, img2, img3, isPromo, descrizione_completa, categoria, regole_attivazione, caratteristiche, Categorie.nome AS nome_cat FROM Smart_Life join Categorie on categoria = cat_id WHERE smart_life_id = $smart_life_id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

@@ -61,7 +61,9 @@ function getFromDB(id){
             path +=     '<a  href="smartLifePerCategoria.html?cat_id='+ smartLife.categoria +'"> > ' + smartLife.nome_cat + '</a>';
             path +=     ' > '+ smartLife.nome_smart_life;
 
-
+            if (smartLife.isPromo == 1) {
+                $('#promo').html('SMART LIFE IN PROMOZIONE');
+            }
             var prezzo = "";
             prezzo += smartLife.prezzo.toString();
             prezzo += " &euro;";
