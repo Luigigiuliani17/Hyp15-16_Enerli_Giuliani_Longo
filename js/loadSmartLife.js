@@ -57,7 +57,7 @@ function getFromDB(id){
             var smartLife = res[0];
             // path
             var path =  '<a  href="smartLifeTutti.html">> Smart Life</a>';
-            path +=     '<a  href="categorie.html?type=1"> > Categorie</a>';
+            path +=     '<a  href="categorie.html?type=2"> > Categorie</a>';
             path +=     '<a  href="smartLifePerCategoria.html?cat_id='+ smartLife.categoria +'"> > ' + smartLife.nome_cat + '</a>';
             path +=     ' > '+ smartLife.nome_smart_life;
 
