@@ -40,8 +40,9 @@ function getFromDB(){
                 if (smartLifeByCat.length > 0) {
                     // creo l'introduzione
 
+
                     res +=    '<div class="jumbotron">';
-                    res +=      '<p class="smart_cat_name">' + smartLifeByCat[0].nome_cat + '</p>'
+                    res +=      '<p class="smart_cat_name"><a href="smartLifePerCategoria.html?cat_id=' + smartLifeByCat[0].categoria + '">' + smartLifeByCat[0].nome_cat + '</a></p>'
                     res +=      '<p class="smart_cat_des">' + smartLifeByCat[0].descrizione + '</p>'
                     res +=   '</div>'
                     res += '<div class="container marketing smart">';
