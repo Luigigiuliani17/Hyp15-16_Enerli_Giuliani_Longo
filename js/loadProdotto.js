@@ -204,7 +204,7 @@ function getSLProd(id){
                 res += '<div class="col-xs-6 col-sm-3 col-md-2">';
                 res +=      '<div class="thumbnail">';
                 res +=          '<a href="smartLife.html?id=' + servizi[i].smart_life_id + '">';
-                res +=              '<img src="/images/smart_life/logo/' + servizi[i].icon + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=              '<img src="images/smart_life/logo/' + servizi[i].icon + '" alt="Image not available, sorry." class="img-responsive">';
                 res +=          '</a>'
                 res +=      '</div>';
                 res += '</div>';

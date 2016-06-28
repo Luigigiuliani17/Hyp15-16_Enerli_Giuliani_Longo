@@ -33,11 +33,11 @@ function getProdPromo(tipo){
 
             var prodotti = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/prodotti.css");
+            $("#css-link").attr('href', "css/prodotti.css");
             //carico il titolo della pagina e il banner
             $("#title").html("TIIM - Prodotti in promozione");
             $("#path").html('<a href="prodottiTutti.html">> Prodotti</a> > Promozione');
-            $("#banner").attr('src', "/images/offerte/banner_prod_promo.png");
+            $("#banner").attr('src', "images/offerte/banner_prod_promo.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "";
@@ -47,10 +47,10 @@ function getProdPromo(tipo){
                 // costruisco iun thumbnail per ogni prodotto
                 res += '<div class="col-xs-12 col-sm-6 col-md-3">';
                 res += 	'<div class="thumbnail over">';
-                res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res += 		'<img src="images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
                 if (prodotti[i].promo == 1) {
                     res += '<span class="over-img">';
-                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res +=      '<img src="images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                     res += '</span>';
                 }
                 res +=       '<div class="caption">';
@@ -83,11 +83,11 @@ function getSLPromo(tipo) {
 
             var smartlife = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/smart_life.css");
+            $("#css-link").attr('href', "css/smart_life.css");
             //carico il titolo della pagina e il banner
             $("#title").html("TIIM - Smart Life in promozione");
             $("#path").html('<a href="smartLifeTutti.html">> SmartLife</a> > Promozione');
-            $("#banner").attr('src', "/images/offerte/banner_sl_promo.png");
+            $("#banner").attr('src', "images/offerte/banner_sl_promo.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = "";
@@ -98,12 +98,12 @@ function getSLPromo(tipo) {
                 // costruisco iun thumbnail per ogni smart life
                 res += '<div class="col-xs-12 col-sm-6 col-md-4">';
                 res += 	'<div class="thumbnail">';
-                res += 		'<img src="/images/smart_life/anteprime/'+ smartlife[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res += 		'<img src="images/smart_life/anteprime/'+ smartlife[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
 
                 //if it is promo
                 if (smartlife[i].isPromo == 1) {
                     res += '<span class="over-img">';
-                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res +=      '<img src="images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                     res += '</span>';
                 }
 
@@ -141,11 +141,11 @@ function getAssPromo(tipo) {
 
             var assistenza = JSON.parse(response);
             // carico il css adatto
-            $("#css-link").attr('href', "/css/assistenza.css");
+            $("#css-link").attr('href', "css/assistenza.css");
             //carico il titolo della pagina e il banner
             $("#title").html("TIIM - Assistenza in evidenza");
             $("#path").html('<a href="assistenzaTutti.html">> Assistenza</a> > In evidenza');
-            $("#banner").attr('src', "/images/offerte/banner_ass_evi.png");
+            $("#banner").attr('src', "images/offerte/banner_ass_evi.png");
 
             // creo la variabile result per contenere il contenuto dinamico della pagina.
             var res = '<div class="row">';

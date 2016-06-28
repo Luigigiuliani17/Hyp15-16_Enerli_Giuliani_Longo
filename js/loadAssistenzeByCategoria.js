@@ -30,7 +30,7 @@ function getCatFromDB(cat){
             // costruisco dinamicamente il path
             $("#path").html('<a href="assistenzaTutti.html">> Assistenza </a> <a href="categorie.html?type=3"> > Categorie</a> > ' + categoria[0].nome_cat);
             // introduzione: riquadro della categoria con icona e titolo
-            $("#icon-cat").attr("src", "/images/categorie/" + categoria[0].icon);
+            $("#icon-cat").attr("src", "images/categorie/" + categoria[0].icon);
             $("#nome-cat").html(categoria[0].nome_cat + ' ('+categoria[0].num_ass + ')');
 
         },

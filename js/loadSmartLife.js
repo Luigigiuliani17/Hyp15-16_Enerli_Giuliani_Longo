@@ -192,7 +192,7 @@ function getProdSL(id){
                 res += '<div class="col-xs-6 col-sm-3 col-md-2">';
                 res +=      '<div class="thumbnail">';
                 res +=          '<a href="prodotto.html?id=' + prodotti[i].prod_id + '">';
-                res +=              '<img src="/images/prodotti/anteprime/' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=              '<img src="images/prodotti/anteprime/' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
                 res +=          '</a>'
                 res +=      '</div>';
                 res += '</div>';

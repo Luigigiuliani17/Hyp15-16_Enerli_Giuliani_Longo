@@ -35,7 +35,7 @@ function getFromDB(){
                     // creo l'introduzione
                     res += '<div class="container marketing">';
                     res +=  '<div class="row prod-title">';
-                    res +=      '<img src="/images/categorie/' + prodByCat[0].icon_cat + '"/>';
+                    res +=      '<img src="images/categorie/' + prodByCat[0].icon_cat + '"/>';
                     res +=      ' ' + '<a href="prodottiPerCategoria.html?cat_id=' + prodByCat[0].categoria + '">' + prodByCat[0].nome_cat + ' (' + prodByCat.length +')</a>';
                     res +=  '</div>';
                     // inizia la riga dei prodotti:
@@ -45,12 +45,12 @@ function getFromDB(){
                         // costruisco iun thumbnail per ogni prodotto
                         res += '<div class="col-xs-12 col-sm-6 col-md-3">';
                         res += 	'<div class="thumbnail over">';
-                        res += 		'<img src="/images/prodotti/anteprime/'+ prodByCat[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                        res += 		'<img src="images/prodotti/anteprime/'+ prodByCat[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
 
                         if (prodByCat[i].promo == 1) {
                             console.log('prodotto in promo');
                             res += '<span class="over-img">';
-                            res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                            res +=      '<img src="images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                             res += '</span>';
                         }
                         res +=          '<div class="caption">';

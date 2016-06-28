@@ -31,7 +31,7 @@ function getCatFromDB(cat){
             // costruisco dinamicamente il path
             $("#path").html('<a href="smartLifeTutti.html">> Smart Life</a> <a href="categorie.html?type=2"> > Categorie</a> > ' + categoria[0].nome_cat);
             // introduzione: riquadro della categoria con icona e titolo
-            $("#icon-cat").attr("src", "/images/categorie/" + categoria[0].icon);
+            $("#icon-cat").attr("src", "images/categorie/" + categoria[0].icon);
             $("#nome-cat").html(categoria[0].nome_cat + ' ('+categoria[0].num_smart + ')');
             $("#des-cat").html(categoria[0].descrizione_cat);
         },
@@ -80,7 +80,7 @@ function getSmartFromDB(cat){
                 res += 		'<img src="images/smart_life/anteprima_large/'+ smartlife[i].anteprima_big + '" alt="Image not available, sorry." class="img-responsive">';
                 if (smartlife[i].isPromo == 1) {
                     res += '<span class="over-img">';
-                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res +=      '<img src="images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                     res += '</span>';
                 }
                 res +=       '<div class="smart_large_text_area">';

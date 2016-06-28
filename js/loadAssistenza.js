@@ -73,7 +73,7 @@ function getFromDB(id){
             //creazione immagine della promo
             if(assistenza.promo[0]==1){
                 var img = '<span class = "over-img" >';
-                img += '<img src="/images/offerte/evidenza.png" alt="Image not available, sorry." class="img-responsive"/>';
+                img += '<img src="images/offerte/evidenza.png" alt="Image not available, sorry." class="img-responsive"/>';
                 img += '</span>';
            		console.log(img);
               	$("#img_promo").html(img);
@@ -175,7 +175,7 @@ function getProdAss(id){
                 res += '<div class="col-xs-6 col-sm-3 col-md-2">';
                 res +=      '<div class="thumbnail">';
                 res +=          '<a href="prodotto.html?id=' + prodotti[i].prod_id + '">';
-                res +=              '<img src="/images/prodotti/anteprime/ante_' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res +=              '<img src="images/prodotti/anteprime/ante_' + prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
                 res +=          '</a>'
                 res +=      '</div>';
                 res += '</div>';

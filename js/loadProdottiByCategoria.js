@@ -31,7 +31,7 @@ function getCatFromDB(cat){
             // costruisco dinamicamente il path
             $("#path").html('<a href="prodottiTutti.html">> Prodotti</a> <a href="categorie.html?type=1"> > Categorie</a> > ' + categoria[0].nome_cat);
             // introduzione: riquadro della categoria con icona e titolo
-            $("#icon-cat").attr("src", "/images/categorie/" + categoria[0].icon);
+            $("#icon-cat").attr("src", "images/categorie/" + categoria[0].icon);
             $("#nome-cat").html(categoria[0].nome_cat + ' ('+categoria[0].num_prod + ')');
         },
         error: function(request,error)
@@ -59,10 +59,10 @@ function getProdFromDB(cat){
                 // costruisco iun thumbnail per ogni prodotto
                 res += '<div class="col-xs-12 col-sm-6 col-md-3">';
                 res += 	'<div class="thumbnail over">';
-                res += 		'<img src="/images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
+                res += 		'<img src="images/prodotti/anteprime/'+ prodotti[i].thumbnail + '" alt="Image not available, sorry." class="img-responsive">';
                 if (prodotti[i].promo == 1) {
                     res += '<span class="over-img">';
-                    res +=      '<img src="/images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
+                    res +=      '<img src="images/offerte/promo.png" alt="Image not available, sorry." class="img-responsive"/>';
                     res += '</span>';
                 }
                 res +=       '<div class="caption">';
