@@ -117,3 +117,8 @@ textarea{
     left: 75%;
     	width: 25%;}
 }
+
+/* sovrascrivo container marketing per metterlo come posizione relativa */
+.container.marketing{
+	position: relative;
+}
