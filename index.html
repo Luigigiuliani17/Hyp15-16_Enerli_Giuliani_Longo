@@ -21,71 +21,10 @@
     </head>
     <body>
 
-     <header>   <!-- Header e barra di navigazione -->
-<nav class="navbar-nav navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".prima-nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html"><img src="images/logo_trans_small.png"></a>
-        </div>
-        <div class="prima-nav-collapse collapse navbar-collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Prodotti<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="prodottiTutti.html">Tutti</a></li>
-                        <li><a href="categorie.html?type=1">Categorie</a></li>
-                        <li><a href="promo.html?type=1">Promozione</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">SmartLife<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="smartLifeTutti.html">Tutti</a></li>
-                        <li><a href="categorie.html?type=2">Categorie</a></li>
-                        <li><a href="promo.html?type=2">Promozione</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Assistenza<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="assistenzaTutti.html">Tutti</a></li>
-                        <li><a href="categorie.html?type=3">Categorie</a></li>
-                        <li><a href="promo.html?type=3">In evidenza</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Chi siamo<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="chiSiamo.html?entry=1">Innovazione</a></li>
-                        <li><a href="chiSiamo.html?entry=2">Testimonials</a></li>
-                        <li><a href="chiSiamo.html?entry=3">Progetti</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Il Gruppo<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="disabled" href="#">Descrizione</a></li>
-                        <li><a class="disabled" href="#">News</a></li>
-                        <li><a class="disabled" href="#">Governance</a></li>
-                        <li><a class="disabled" href="#">Business e Mercato</a></li>
-                        <li><a class="disabled" href="#">Per gli Investitori</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div><!-- /.nav-collapse -->
-    </div>
-</nav> </header>
 
 
-        <!-- Includo navbar da altro file
-        <header id="includedNavbar"></header>  -->
+        <!-- Includo navbar da altro file-->
+        <header id="includedNavbar"></header>
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top:-19px;">
             <ol class="carousel-indicators">
@@ -133,8 +72,7 @@
                             <section class="hsquare">
                                 <img src="images/home/promo_smartlife.png" alt='Grand Canyon'>
                                 <p class="htxt">Scopri i Servizi SmartLife in promozione</p>
-                      <!--          <p class="hbtn"><a href="promo.html?type=2" class="button">Dettagli</a></p>  -->
-                                <p class="hbtn"><a href="prodottiTutti.html" class="button">Dettagli</a></p>
+                                <p class="hbtn"><a href="promo.html?type=2" class="button">Dettagli</a></p>
                             </section>
                         </div>
                     </div>
@@ -162,7 +100,7 @@
         <!-- Include navbar e footer dai rispettivi componenti html -->
         <script>
             $(function(){
-               /* $("#includedNavbar").load("html-componenti/navbar.html");  */
+                $("#includedNavbar").load("html-componenti/navbar.html");
                 $("#includedFooter").load("html-componenti/footer.html");
             });
         </script>
