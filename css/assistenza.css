@@ -31,7 +31,7 @@ ul#lista li {
 /* modifiche stile lista promo */
 ul#lista_promo li {
     font-size: 132%;
-    list-style-image: url('/images/offerte/promoverde.png');
+    list-style-image: url('images/offerte/promoverde.png');
 }
 
 /* no spazio tra ul list*/

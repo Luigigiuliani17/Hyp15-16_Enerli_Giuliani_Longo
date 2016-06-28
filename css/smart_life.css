@@ -1,7 +1,7 @@
 /* modifiche al banner della categoria dello smart life*/
 .container .jumbotron {
     position: relative;
-    background-image: url("../images/smart_life/banner1.png");
+    background-image: url("images/smart_life/banner1.png");
     background-size: cover;
     overflow: hidden;
     height: 180px;
