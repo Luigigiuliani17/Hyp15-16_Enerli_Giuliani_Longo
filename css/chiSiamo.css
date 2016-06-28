@@ -192,7 +192,12 @@ h5.citato {
     .tondo{
         padding-top: 10px;
     }
+}
 
+@media (max-width: 1024px) {
+    .tondo > img{
+        padding-top: 50px;
+    }
 }
 
 /*Titolo rosso (es: PENINSULA TALKS*/
@@ -243,6 +248,14 @@ h5.citato {
 @media (max-width: 767px) {
     .descr{
         font-size: 110%;
+        line-height: 20px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .descr{
+        font-size: 125%;
         line-height: 20px;
         padding-right: 0px;
     }
