@@ -34,7 +34,6 @@ ul#lista_promo li {
     list-style-image: url('/images/offerte/promoverde.png');
 }
 
-
 /* no spazio tra ul list*/
 ul + ul {
     margin-top: -9px;
@@ -45,6 +44,14 @@ h2 + h2 {
     margin-top: 4%;
 }
 
+.row.ass-title + .row {
+	margin-top:20px;
+    }
+
+.row.ass-title + #content {
+	margin-top:20px;
+    }
+
 /*modifica stile del nome dell'assistenza*/
 #nome_ass {
     color: #0b3d86;
@@ -54,6 +61,7 @@ h2 + h2 {
 
 #descrizione{
     list-style-type:none;
+    padding-left:-10%;
 }
 
 #faq{
@@ -92,18 +100,6 @@ textarea{
     resize: vertical;
 
     padding-right: 40px;
-}
-
-/* sovrascrivo il container marketing per inserire l'immagine per la promo */
-.container.marketing {
-    align-self: center;
-    max-width: 100%;
-    background-color: white;
-    padding: 40px;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    border-radius: 8px;
-    position: relative;
 }
 
 /* fissa l'immagine al lato destro della descrizione*/
