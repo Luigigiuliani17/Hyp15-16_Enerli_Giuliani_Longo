@@ -1,0 +1,288 @@
+/* SECOND NAVBAR NAVIGATION */
+nav.third-navbar.navbar-inverse {
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    background: #fff;
+}
+@media (max-width:767px){
+    nav.third-navbar.navbar-inverse {
+        top: 47px;
+    }
+}
+nav.third-navbar.navbar-inverse ul {
+    padding: 0px;
+    padding-top: 13px;
+    margin: 0 auto;
+    list-style: none;
+    text-align: left;
+}
+nav.third-navbar.navbar-inverse {
+
+}
+
+@media only screen and (max-width: 766px) {
+    .third-navbar > .collapsing, .third-navbar > .in {background-color: #fff;}
+    .third-navbar > .collapsing ul li a, .third-navbar > .in ul li a {color: #0b3d86!important;}
+    .third-navbar > .collapsing ul li a:hover, .third-navbar > .in ul li a:hover {color: #135EBD!important;}
+}
+
+nav.third-navbar.navbar-inverse ul li {
+    margin: 0 10px;
+}
+nav.third-navbar.navbar-inverse ul li a {
+    padding: 3px 0;
+    color: #0b3d86;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+nav.third-navbar.navbar-inverse ul li a:hover {
+    color: #135EBD;
+    background-color: #fff;
+    cursor: pointer;
+}
+a.active {
+    color: #135EBD;
+    border-bottom: 9px solid #135EBD;
+}
+nav.third-navbar.navbar-inverse >  .navbar-nav .nav  .navbar-left {
+    font-size: 1.2em;
+}
+nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+    color: #0b3d86;
+    font-weight: 600;
+}
+@media(max-width: 767px) {
+    nav.third-navbar.navbar-inverse > .navbar-header > .navbar-brand {
+        color: #0b3d86;
+        font-size: 14px;
+    }
+}
+.third-navbar.navbar-inverse .icon-bar {
+    background-color: #0b3d86;
+}
+
+
+.banner {
+    position: relative;
+    padding-top: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.banner > span {
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 50%;
+    left: 0px;
+}
+@media (max-width: 767px) {
+    .banner > span {
+        font-size: 14px;
+    }
+}
+
+
+
+/************************* TESTIMONIALZ *****************************************/
+.spot, .quote {
+    background-color: #fff;
+}
+.quote {
+    color: #0b3d86;
+    font-size: 24px;
+    text-align: left;
+    padding-top: 1px;
+    padding-left: 15px;
+    height: 100%;
+}
+.spot {
+    padding: 20px;
+}
+.testimonial > img {
+    width: 100%;
+}
+.pad {
+    padding: 5px;
+}
+.container.test {
+    margin-bottom: 40px;
+}
+
+h2.virgolette {
+    font-family: cursive;
+    font-size: 60px;
+    width: 20%;
+    margin-bottom: -35px;
+}
+h4.citazione {
+    font-size: 26px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+h5.citato {
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: right;
+}
+@media (min-width: 767px){
+    .row {
+        display: flex;
+    }
+}
+@media (min-width: 992px) {
+    h2.virgolette {
+        font-size: 80px;
+    }
+    h4.citazione{
+        font-size: 38px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    h5.citato {
+        font-size: 18px;
+    }
+}
+@media (max-width: 452px) {
+    h2.virgolette {
+        font-size: 20px;
+        padding-left: 10px;
+        margin-bottom: -20px;
+    }
+    h4.citazione {
+        font-size: 14px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+    h5.citato {
+        font-size: 10px;
+    }
+    .quote {
+        padding-left: 5px;
+    }
+}
+.blue {
+    color: #0b3d86;
+}
+/************************* TESTIMONIALZ ***************************************** END */
+
+/************************ INNOVA ZIO! ****************************/
+
+
+.tondo{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.tondo > img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 767px) {
+    .tondo{
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .tondo > img{
+        padding-top: 50px;
+    }
+}
+
+/*Titolo rosso (es: PENINSULA TALKS*/
+.titleRed{
+    text-align: center;
+    color: #cf2a27;
+    font-weight: bold;
+    font-size: 180%;
+}
+
+/*Sottotitolo azzurrino*/
+.subtitle{
+    font-size: 170%;
+    color: #085394;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    .subtitle{
+        font-size: 120%;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+/*Container testo dell'introduzione (sotto al titolo rosso*/
+.intro{
+    padding-top: 50px;
+    padding-right: 5%;
+}
+
+@media (max-width: 767px) {
+    .intro{
+        padding-top: 20px;
+        padding-right: 0px;
+    }
+}
+
+/*Testo descrizione*/
+.descr{
+    color: black;
+    font-size: 150%;
+    text-align: justify;
+    line-height: 25px;
+
+}
+
+@media (max-width: 767px) {
+    .descr{
+        font-size: 110%;
+        line-height: 20px;
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .descr{
+        font-size: 125%;
+        line-height: 20px;
+        padding-right: 0px;
+    }
+}
+
+
+/*Creo linea orizzontale*/
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid black;
+}
+
+@media (max-width: 767px) {
+    hr{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-top: 1px solid black;
+    }
+}
+
+#banner1 > span {
+    top: 37%;
+}
+
+@media (max-width: 767px) {
+    #banner1 > span {
+        top: 46%;
+    }
+}
