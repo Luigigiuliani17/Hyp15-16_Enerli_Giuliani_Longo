@@ -1,16 +1,22 @@
 Hypermedia application project 2015/2016
 
-Tiim website
+http://tiim.altervista.org/
 
 Damiano Enerli
 Edoardo Longo
 Luigi Giuliani
 
 FRAMEWORK:
-Abbiamo usato il framework Bootstrap.
+- Bootstrap
+- jquery.js
 
-Abbiamo usato le seguenti risorse:
-    jquery.js;
+TECNOLOGIE:
+- HTML5
+- CSS3
+- javascript
+- Ajax
+- JSON
+- php
   
 Per la creazione della palette dei colori del sito, abbiamo utilizzato Adobe Kuler    
 
